@@ -37,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   appBar: {
+    background: "#6d6d7d",
     [theme.breakpoints.up("sm")]: {
       width: `calc(100% - ${drawerWidth}px)`,
       marginLeft: drawerWidth,
@@ -120,13 +121,13 @@ export default function ResponsiveDrawer(props) {
       <div className={classes.toolbar} />
       <List>
         {[
-          "緊急時のわがやの情報",
           "Home",
-          "グラっと地震が来たら！いのちを守る！できるだけケガをせず生き残る！",
-          "揺れがおさまったら",
-          "ほくせつママ＆パパの体験談",
-          "まだ大丈夫は危険!",
-          "いざ逃げる!",
+          "エメラルドハント",
+          "ブロストライカー",
+          "賞金稼ぎ",
+          "ホットゾーン",
+          "強奪",
+          "制圧",
           "防災グッズ",
           "食べ物がない!?",
           "パパの体験談",

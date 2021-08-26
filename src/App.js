@@ -21,39 +21,23 @@ import P15Bousaikaigi from "./pages/P15Bousaikaigi";
 
 
 const paths = [
-  "/form",
   "/", 
+  "/form",
   "/jishin", 
   "/koudouChart",
   "/Taiken",
   "/mada",
   "/izanigeru",
-  "/bousaiGoods",
-  "/foods",
-  "/papaTaiken",
-  "/souzou",
-  "/otiru",
-  "/toilet",
-  "/daijobu",
-  "/bousaikaigi",
 ];
 
 const pages = [
-  <P0Form />,
   <Home />,
+  <P0Form />,
   <P3Jishin />,
   <P4Yurega />,
   <P5Taiken />,
   <P6Mada />,
   <P7Izanigeru />,
-  <P8Goods />,
-  <P9Foods />,
-  <P10TaikenPapa />,
-  <P11KikenSouzou />,
-  <P12KikenJissai />,
-  <P13Toilet />,
-  <P14Daijobu />,
-  <P15Bousaikaigi />,
 ];
 
 const titles = [
@@ -64,14 +48,6 @@ const titles = [
   "ホットゾーン",
   "強奪",
   "制圧",
-  "防災グッズ",
-  "食べ物がない!?",
-  "パパの体験談",
-  "どんな危険が起こる？",
-  "落ちる! 倒れる! 動く!",
-  "トイレが大変!",
-  "私は大丈夫って思ってない?",
-  "家族で防災カイギ",
 ];
 
 function App() {

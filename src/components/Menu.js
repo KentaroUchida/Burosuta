@@ -18,13 +18,19 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import PrintIcon from "@material-ui/icons/Print";
 import WarningIcon from "@material-ui/icons/WarningSharp";
+import LocalAtmIcon from '@material-ui/icons/LocalAtm';
 import HomeIcon from "@material-ui/icons/HomeSharp";
+import SportsSoccerIcon from '@material-ui/icons/SportsSoccer';
+import FlagIcon from '@material-ui/icons/Flag';
+import { GiCutDiamond, GiSoccerBall, GiRoundStar, GiScrew } from 'react-icons/gi';
+import { IoFlag } from 'react-icons/io5';
+import { FcSafe } from 'react-icons/fc';
 import DirectionsRunSharpIcon from "@material-ui/icons/DirectionsRunSharp";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
 
-const drawerWidth = 350;
+const drawerWidth = 250;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -37,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   appBar: {
-    background: "#6d6d7d",
+    background: "#6d6d7d", //色変更
     [theme.breakpoints.up("sm")]: {
       width: `calc(100% - ${drawerWidth}px)`,
       marginLeft: drawerWidth,
@@ -82,38 +88,22 @@ export default function ResponsiveDrawer(props) {
 
   const icons = [
     <HomeIcon />,
-    <WarningIcon />,
-    <DirectionsRunSharpIcon />,
-    <DirectionsRunSharpIcon />,
-    <WarningIcon />,
-    <HomeIcon />,
-    <WarningIcon />,
-    <DirectionsRunSharpIcon />,
-    <DirectionsRunSharpIcon />,
-    <WarningIcon />,
-    <HomeIcon />,
-    <WarningIcon />,
-    <DirectionsRunSharpIcon />,
-    <DirectionsRunSharpIcon />,
-    <WarningIcon />,
+    <GiCutDiamond size={25}/>,
+    <GiSoccerBall size={25}/>,
+    <GiRoundStar size={25}/>,
+    <IoFlag size={25}/>,
+    <FcSafe size={25}/>,
+    <GiScrew size={25}/>,
   ];
 
   const links = [
-    "/form",
     "/", 
+    "/form",
     "/jishin", 
     "/koudouChart",
     "/Taiken",
     "/mada",
     "/izanigeru",
-    "/bousaiGoods",
-    "/foods",
-    "/papaTaiken",
-    "/souzou",
-    "/otiru",
-    "/toilet",
-    "/daijobu",
-    "/bousaiKaigi",
   ];
 
   const drawer = (
@@ -128,14 +118,6 @@ export default function ResponsiveDrawer(props) {
           "ホットゾーン",
           "強奪",
           "制圧",
-          "防災グッズ",
-          "食べ物がない!?",
-          "パパの体験談",
-          "どんな危険が起こる？",
-          "落ちる! 倒れる! 動く!",
-          "トイレが大変!",
-          "私は大丈夫って思ってない?",
-          "家族で防災カイギ",
         ].map((text, index) => (
           <Link to={links[index]} key={index} style={{ textDecoration: 'none' }} >
             <Divider />

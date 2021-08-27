@@ -112,7 +112,7 @@ const photoTexts = [
   "ベランダの壁を突き破り、隣家からタイヤが飛んできました",
 ];
 
-export const P5Taiken = () => {
+export const P4HotZone = () => {
   return (
     <>
       <FlexImage image="img/pages/Taiken/title.png" />

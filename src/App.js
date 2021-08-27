@@ -2,14 +2,13 @@ import { BrowserRouter, Route, useHistory } from "react-router-dom";
 import { useSwipeable } from "react-swipeable";
 
 import Home from "./pages/Home";
-
-import P0Form from "./pages/P0Form";
 import Menu from "./components/Menu";
-import {P3Jishin} from "./pages/P3Jishin";
-import P4Yurega  from "./pages/P4Yurega";
-import {P5Taiken} from "./pages/P5Taiken";
-import P6Mada from './pages/P6Mada';
-import {P7Izanigeru} from "./pages/P7Izanigeru";
+import P1Emerald from "./pages/P1Emerald";
+import {P2Soccer} from "./pages/P2Soccer";
+import P3Reward  from "./pages/P3Reward";
+import {P4HotZone} from "./pages/P4HotZone";
+import P5Robbery from './pages/P5Robbery';
+import {P6Suppression} from "./pages/P6Suppression";
 import P8Goods from "./pages/P8Goods";
 import P9Foods from "./pages/P9Foods";
 import {P10TaikenPapa} from "./pages/P10TaikenPapa";
@@ -22,22 +21,22 @@ import P15Bousaikaigi from "./pages/P15Bousaikaigi";
 
 const paths = [
   "/", 
-  "/form",
-  "/jishin", 
-  "/koudouChart",
-  "/Taiken",
-  "/mada",
-  "/izanigeru",
+  "/emerald",
+  "/soccer", 
+  "/reward",
+  "/hotzone",
+  "/robbery",
+  "/suppression",
 ];
 
 const pages = [
   <Home />,
-  <P0Form />,
-  <P3Jishin />,
-  <P4Yurega />,
-  <P5Taiken />,
-  <P6Mada />,
-  <P7Izanigeru />,
+  <P1Emerald />,
+  <P2Soccer />,
+  <P3Reward />,
+  <P4HotZone />,
+  <P5Robbery />,
+  <P6Suppression />,
 ];
 
 const titles = [

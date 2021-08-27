@@ -97,7 +97,7 @@ class PrintFacilityInformation extends React.Component {
   }
 }
 
-class Form extends React.Component {
+class P1Emerald extends React.Component {
   constructor() {
     super();
     // nullなら[]を代入する
@@ -257,4 +257,4 @@ class Form extends React.Component {
 
 }
 
-export default Form;
+export default P1Emerald;

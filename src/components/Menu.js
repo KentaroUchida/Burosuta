@@ -98,12 +98,12 @@ export default function ResponsiveDrawer(props) {
 
   const links = [
     "/", 
-    "/form",
-    "/jishin", 
-    "/koudouChart",
-    "/Taiken",
-    "/mada",
-    "/izanigeru",
+    "/emerald",
+    "/soccer", 
+    "/reward",
+    "/hotzone",
+    "/robbery",
+    "/suppression",
   ];
 
   const drawer = (

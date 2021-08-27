@@ -164,7 +164,7 @@ const SafetyMeasures = () => {
   );
 };
 
-export const P3Jishin = () => {
+export const P2Soccer = () => {
   return (
     <>
       <Title />

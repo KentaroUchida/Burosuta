@@ -236,7 +236,7 @@ class ShelterInformation extends React.Component {
 	}
 }
 
-export const P7Izanigeru= () => {
+export const P6Suppression= () => {
 	return(<>
 		<Title/>
 		<Shelter/>

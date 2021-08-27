@@ -4,11 +4,11 @@ import { useSwipeable } from "react-swipeable";
 import Home from "./pages/Home";
 import Menu from "./components/Menu";
 import P1Emerald from "./pages/P1Emerald";
-import {P2Soccer} from "./pages/P2Soccer";
+import P2Soccer from "./pages/P2Soccer";
 import P3Reward  from "./pages/P3Reward";
-import {P4HotZone} from "./pages/P4HotZone";
+import P4HotZone from "./pages/P4HotZone";
 import P5Robbery from './pages/P5Robbery';
-import {P6Suppression} from "./pages/P6Suppression";
+import P6Suppression from "./pages/P6Suppression";
 
 
 const paths = [

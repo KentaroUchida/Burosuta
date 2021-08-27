@@ -4,7 +4,7 @@ class P1Emerald extends React.Component {
   render() {
     return (
       <div>
-        内田健太郎
+        burosuta
       </div>
     );
   }

@@ -166,7 +166,7 @@ function CautionStep() {
   );
 }
 
-export default function P4Yurega() {
+export default function P3Reward() {
   return (<>
     <Notice/>
     <br/>

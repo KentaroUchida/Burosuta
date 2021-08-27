@@ -1,16 +1,16 @@
 {
   "short_name": "三田防災デモ",
-  "name": "三田市防災ノート(仮)",
+  "name": "ブロスタ完全攻略",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "buroicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "bousai_logo128.png",
+      "src": "buroicon256.png",
       "type": "image/png",
-      "sizes": "128x128"
+      "sizes": "256x256"
     },
     {
       "src": "bousai_logo512.png",

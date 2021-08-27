@@ -9,14 +9,6 @@ import P3Reward  from "./pages/P3Reward";
 import {P4HotZone} from "./pages/P4HotZone";
 import P5Robbery from './pages/P5Robbery';
 import {P6Suppression} from "./pages/P6Suppression";
-import P8Goods from "./pages/P8Goods";
-import P9Foods from "./pages/P9Foods";
-import {P10TaikenPapa} from "./pages/P10TaikenPapa";
-import {P11KikenSouzou} from "./pages/P11KikenSouzou";
-import {P12KikenJissai} from "./pages/P12KikenJissai";
-import {P13Toilet} from "./pages/P13Toilet";
-import {P14Daijobu} from './pages/P14Daijobu';
-import P15Bousaikaigi from "./pages/P15Bousaikaigi";
 
 
 const paths = [

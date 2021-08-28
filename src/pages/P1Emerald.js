@@ -4,7 +4,7 @@ class P1Emerald extends React.Component {
   render() {
     return (
       <div>
-        burosuta
+        fuchi
       </div>
     );
   }

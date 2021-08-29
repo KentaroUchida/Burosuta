@@ -25,6 +25,7 @@ import { FcSafe } from 'react-icons/fc';
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
+import { height } from "@material-ui/system";
 
 const drawerWidth = 230;
 
@@ -64,6 +65,11 @@ const useStyles = makeStyles((theme) => ({
     background: "#e8e8ed",
     padding: theme.spacing(3),
   },
+  buroicon:{
+    width: "40",
+    height: "25",
+    marginLeft: "10",
+  }
 }));
 
 export default function ResponsiveDrawer(props) {
@@ -184,13 +190,23 @@ export default function ResponsiveDrawer(props) {
             }}
           >
             <div className={classes.drawerHeader}>
-              <IconButton onClick={handleDrawerClose}>
-                {theme.direction === "ltr" ? (
-                  <ChevronLeftIcon />
-                ) : (
-                  <ChevronRightIcon />
-                )}
-              </IconButton>
+              <Grid alignItems="center" justifyContent="center" container >
+                <Grid item xs="2" className={classes.buroicon}>
+                  <img src="/buroicon256.jpg" width="24" height="24"/>
+                </Grid>
+                <Grid item>
+                  <Typography>ブロスタ完全攻略</Typography>
+                </Grid>
+                <Grid item>
+                  <IconButton onClick={handleDrawerClose}>
+                    {theme.direction === "ltr" ? (
+                      <ChevronLeftIcon />
+                    ) : (
+                      <ChevronRightIcon />
+                    )}
+                  </IconButton>
+                </Grid>
+              </Grid>
             </div>
             {drawer}
           </Drawer>

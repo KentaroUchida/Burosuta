@@ -1,20 +1,29 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
+import makeStyles from "@material-ui/core/styles/makeStyles";
 
+const styleCss = makeStyles({
+  root: {
+    width : "100%",
+    height : "",
+    color : "red",
+  },
+  a: {
+    
+  }
+})
 
-
-
-class Home extends React.Component {
-  render() {
-    return(
-      <div>
-        <Typography>
-          ブロスタ完全攻略
-        </Typography>
-        <br></br>
+function Page() {
+    const classes = styleCss();
+    return (
+      <div className={classes.root}>
+        fuchi
       </div>
     );
-  }
 }
 
-export default Home;
+export default function Home() {
+  return (
+    <Page/>
+  )
+};

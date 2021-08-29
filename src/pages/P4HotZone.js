@@ -1,13 +1,29 @@
 import React from "react";
+import makeStyles from "@material-ui/core/styles/makeStyles";
+import { red } from "@material-ui/core/colors";
 
-class P4HotZone extends React.Component {
-  render() {
+const styleCss = makeStyles({
+  root: {
+    width : "100%",
+    height : "",
+    color : "red",
+  },
+  a: {
+    
+  }
+})
+
+function Page() {
+    const classes = styleCss();
     return (
-      <div>
-        burosuta
+      <div className={classes.root}>
+        fuchi
       </div>
     );
-  }
 }
 
-export default P4HotZone;
+export default function P4HotZone() {
+  return (
+    <Page/>
+  )
+};

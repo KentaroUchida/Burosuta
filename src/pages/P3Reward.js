@@ -1,13 +1,28 @@
 import React from "react";
+import makeStyles from "@material-ui/core/styles/makeStyles";
 
-class P3Reward extends React.Component {
-  render() {
+const styleCss = makeStyles({
+  root: {
+    width : "100%",
+    height : "",
+    color : "red",
+  },
+  a: {
+    
+  }
+})
+
+function Page() {
+    const classes = styleCss();
     return (
-      <div>
-        burosuta
+      <div className={classes.root}>
+        fuchi
       </div>
     );
-  }
 }
 
-export default P3Reward;
+export default function P3Reward() {
+  return (
+    <Page/>
+  )
+};

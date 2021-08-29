@@ -6,6 +6,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import Divider from "@material-ui/core/Divider";
 import Drawer from "@material-ui/core/Drawer";
 import Hidden from "@material-ui/core/Hidden";
+
 import IconButton from "@material-ui/core/IconButton";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
@@ -17,20 +18,15 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import PrintIcon from "@material-ui/icons/Print";
-import WarningIcon from "@material-ui/icons/WarningSharp";
-import LocalAtmIcon from '@material-ui/icons/LocalAtm';
 import HomeIcon from "@material-ui/icons/HomeSharp";
-import SportsSoccerIcon from '@material-ui/icons/SportsSoccer';
-import FlagIcon from '@material-ui/icons/Flag';
 import { GiCutDiamond, GiSoccerBall, GiRoundStar, GiScrew } from 'react-icons/gi';
 import { IoFlag } from 'react-icons/io5';
 import { FcSafe } from 'react-icons/fc';
-import DirectionsRunSharpIcon from "@material-ui/icons/DirectionsRunSharp";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
 
-const drawerWidth = 250;
+const drawerWidth = 230;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -65,6 +61,7 @@ const useStyles = makeStyles((theme) => ({
   },
   content: {
     flexGrow: 1,
+    background: "#e8e8ed",
     padding: theme.spacing(3),
   },
 }));
@@ -211,7 +208,7 @@ export default function ResponsiveDrawer(props) {
         </Hidden>
       </nav>
       <main className={classes.content}>
-        <div className={classes.toolbar} />
+        <div className={classes.toolbar}/>
         <Typography paragraph>{props.children}</Typography>
       </main>
     </div>

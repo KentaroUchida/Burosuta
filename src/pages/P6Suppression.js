@@ -1,13 +1,29 @@
 import React from "react";
+import makeStyles from "@material-ui/core/styles/makeStyles";
+import { red } from "@material-ui/core/colors";
 
-class P6Suppression extends React.Component {
-  render() {
+const styleCss = makeStyles({
+  root: {
+    width : "100%",
+    height : "",
+    color : "red",
+  },
+  a: {
+    
+  }
+})
+
+function Page() {
+    const classes = styleCss();
     return (
-      <div>
-        burosuta
+      <div className={classes.root}>
+        fuchi
       </div>
     );
-  }
 }
 
-export default P6Suppression;
+export default function P6Suppression() {
+  return (
+    <Page/>
+  )
+};

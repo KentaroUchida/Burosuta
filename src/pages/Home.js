@@ -17,6 +17,9 @@ function Page() {
     const classes = styleCss();
     return (
       <div className={classes.root}>
+        <Typography>
+          fuchi
+        </Typography>
         fuchi
       </div>
     );

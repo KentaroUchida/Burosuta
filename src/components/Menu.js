@@ -25,7 +25,6 @@ import { FcSafe } from 'react-icons/fc';
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
-import { height } from "@material-ui/system";
 
 const drawerWidth = 230;
 
@@ -182,6 +181,7 @@ export default function ResponsiveDrawer(props) {
             anchor={theme.direction === "rtl" ? "right" : "left"}
             open={mobileOpen}
             onClose={handleDrawerToggle}
+            position="fixed"
             classes={{
               paper: classes.drawerPaper,
             }}
@@ -190,7 +190,7 @@ export default function ResponsiveDrawer(props) {
             }}
           >
             <div className={classes.drawerHeader}>
-              <Grid alignItems="center" justifyContent="center" container >
+              <Grid alignItems="center" justifyContent="center" container>
                 <Grid item xs="2" className={classes.buroicon}>
                   <img src="/buroicon256.jpg" width="24" height="24"/>
                 </Grid>

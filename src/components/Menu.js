@@ -20,6 +20,7 @@ import { GiCutDiamond, GiSoccerBall, GiRoundStar, GiScrew } from 'react-icons/gi
 import { IoFlag } from 'react-icons/io5';
 import { FcSafe } from 'react-icons/fc';
 import { Link } from "react-router-dom";
+import { Grid } from '@material-ui/core';
 
 const drawerWidth = 240;
 
@@ -113,6 +114,16 @@ export default function MiniDrawer(props) {
     <GiScrew size={25}/>,
   ];
 
+  const imgs = [
+    "/img/pages/Menu/emerald.png",
+    "/img/pages/Menu/emerald.png",
+    "/img/pages/Menu/soccer.png",
+    "/img/pages/Menu/reward.png",
+    "/img/pages/Menu/hotzone.png",
+    "/img/pages/Menu/robbery.png",
+    "/img/pages/Menu/suppression.png",
+  ];
+
   const links = [
     "/", 
     "/emerald",
@@ -150,7 +161,7 @@ export default function MiniDrawer(props) {
         </Toolbar>
       </AppBar>
       <Drawer
-      container={container}
+        container={container}
         variant="permanent"
         className={clsx(classes.drawer, {
           [classes.drawerOpen]: open,
@@ -169,7 +180,7 @@ export default function MiniDrawer(props) {
           </IconButton>
         </div>
         <Divider />
-        <List color="black">
+        <List>
           {["Home",
           "エメラルドハント",
           "ブロストライカー",
@@ -180,10 +191,19 @@ export default function MiniDrawer(props) {
         ].map((text, index) => (
           <Link to={links[index]} key={index} style={{ 
             color:'black', //文字色変更
-            textDecoration: 'none' }} >
+            textDecoration: 'none',
+            whiteSpace: 'noWrap',
+            }} >
           <ListItem button onClick={handleDrawerClose}>
-            <ListItemIcon>{icons[index]}</ListItemIcon>
-            <ListItemText primary={text} />
+            {/* <ListItemIcon>{icons[index]}</ListItemIcon> */}
+            <Grid container wrap="nowrap" spacing={6}>
+            <Grid item xs="2" >
+            <img src={imgs[index]} width="30" height="30"/>
+            </Grid>
+            <Grid item >
+            <ListItemText primary={text}/>
+            </Grid>
+            </Grid>
           </ListItem>
           <Divider />
           </Link>

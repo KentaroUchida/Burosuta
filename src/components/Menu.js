@@ -1,92 +1,107 @@
-import React from "react";
-import clsx from "clsx";
-import PropTypes from "prop-types";
+import React from 'react';
+import clsx from 'clsx';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import Drawer from '@material-ui/core/Drawer';
+import Toolbar from '@material-ui/core/Toolbar';
+import List from '@material-ui/core/List';
+import Typography from '@material-ui/core/Typography';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
 import AppBar from "@material-ui/core/AppBar";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Divider from "@material-ui/core/Divider";
-import Drawer from "@material-ui/core/Drawer";
-import Hidden from "@material-ui/core/Hidden";
-
-import IconButton from "@material-ui/core/IconButton";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import ListIcon from "@material-ui/icons/List";
-import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import PrintIcon from "@material-ui/icons/Print";
 import HomeIcon from "@material-ui/icons/HomeSharp";
 import { GiCutDiamond, GiSoccerBall, GiRoundStar, GiScrew } from 'react-icons/gi';
 import { IoFlag } from 'react-icons/io5';
 import { FcSafe } from 'react-icons/fc';
-import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
-import Grid from "@material-ui/core/Grid";
-import { height } from "@material-ui/system";
+import { Grid } from '@material-ui/core';
 
-const drawerWidth = 230;
+const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: "flex",
-  },
-  drawer: {
-    [theme.breakpoints.up("sm")]: {
-      width: drawerWidth,
-      flexShrink: 0,
-    },
+    display: 'flex',
   },
   appBar: {
     background: "#6d6d7d", //色変更
-    [theme.breakpoints.up("sm")]: {
-      width: `calc(100% - ${drawerWidth}px)`,
-      marginLeft: drawerWidth,
-    },
+    zIndex: theme.zIndex.drawer + 1,
+    transition: theme.transitions.create(['width', 'margin'], {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    }),
+  },
+  appBarShift: {
+    marginLeft: drawerWidth,
+    width: `calc(100% - ${drawerWidth}px)`,
+    transition: theme.transitions.create(['width', 'margin'], {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
   },
   menuButton: {
-    marginRight: theme.spacing(2),
-    [theme.breakpoints.up("sm")]: {
-      display: "none",
-    },
+    marginRight: 36,
   },
   hide: {
-    display: "none",
+    display: 'none',
   },
-  // necessary for content to be below app bar
-  toolbar: theme.mixins.toolbar,
-  drawerPaper: {
+  drawer: {
     width: drawerWidth,
+    flexShrink: 0,
+    whiteSpace: 'nowrap',
+  },
+  drawerOpen: {
+    width: drawerWidth,
+    transition: theme.transitions.create('width', {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+  },
+  drawerClose: {
+    transition: theme.transitions.create('width', {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    }),
+    overflowX: 'hidden',
+    width: theme.spacing(7) + 1,
+    [theme.breakpoints.up('sm')]: {
+      width: theme.spacing(9) + 1,
+    },
+  },
+  toolbar: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    padding: theme.spacing(0, 1),
+    // necessary for content to be below app bar
+    ...theme.mixins.toolbar,
   },
   content: {
     flexGrow: 1,
     background: "#e8e8ed",
     padding: theme.spacing(3),
   },
-  buroicon:{
-    width: "40",
-    height: "25",
-    marginLeft: "10",
-  }
 }));
 
-export default function ResponsiveDrawer(props) {
+export default function MiniDrawer(props) {
   const { window } = props;
   const classes = useStyles();
   const theme = useTheme();
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(false);
+  const container =
+    window !== undefined ? () => window().document.body : undefined;
+
   const handleDrawerOpen = () => {
-    setMobileOpen(true);
+    setOpen(true);
   };
 
   const handleDrawerClose = () => {
-    setMobileOpen(false);
-  };
-
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
+    setOpen(false);
   };
 
   const icons = [
@@ -99,6 +114,16 @@ export default function ResponsiveDrawer(props) {
     <GiScrew size={25}/>,
   ];
 
+  const imgs = [
+    "/img/pages/Menu/emerald.png",
+    "/img/pages/Menu/emerald.png",
+    "/img/pages/Menu/soccer.png",
+    "/img/pages/Menu/reward.png",
+    "/img/pages/Menu/hotzone.png",
+    "/img/pages/Menu/robbery.png",
+    "/img/pages/Menu/suppression.png",
+  ];
+
   const links = [
     "/", 
     "/emerald",
@@ -109,12 +134,54 @@ export default function ResponsiveDrawer(props) {
     "/suppression",
   ];
 
-  const drawer = (
-    <div>
-      <div className={classes.toolbar} />
-      <List>
-        {[
-          "Home",
+  return (
+    <div className={classes.root}>
+      <CssBaseline />
+      <AppBar
+        position="fixed"
+        className={clsx(classes.appBar, {
+          [classes.appBarShift]: open,
+        })}
+      >
+        <Toolbar>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            onClick={handleDrawerOpen}
+            edge="start"
+            className={clsx(classes.menuButton, {
+              [classes.hide]: open,
+            })}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" noWrap>
+            {props.title}
+          </Typography>
+        </Toolbar>
+      </AppBar>
+      <Drawer
+        container={container}
+        variant="permanent"
+        className={clsx(classes.drawer, {
+          [classes.drawerOpen]: open,
+          [classes.drawerClose]: !open,
+        })}
+        classes={{
+          paper: clsx({
+            [classes.drawerOpen]: open,
+            [classes.drawerClose]: !open,
+          }),
+        }}
+      >
+        <div className={classes.toolbar}>
+          <IconButton onClick={handleDrawerClose}>
+            {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
+          </IconButton>
+        </div>
+        <Divider />
+        <List>
+          {["Home",
           "エメラルドハント",
           "ブロストライカー",
           "賞金稼ぎ",
@@ -122,121 +189,31 @@ export default function ResponsiveDrawer(props) {
           "強奪",
           "制圧",
         ].map((text, index) => (
-          <Link to={links[index]} key={index} style={{ textDecoration: 'none' }} >
-            <Divider />
-            <ListItem button onClick={handleDrawerClose}>
-              <ListItemIcon>{icons[index]}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
+          <Link to={links[index]} key={index} style={{ 
+            color:'black', //文字色変更
+            textDecoration: 'none',
+            whiteSpace: 'noWrap',
+            }} >
+          <ListItem button onClick={handleDrawerClose}>
+            {/* <ListItemIcon>{icons[index]}</ListItemIcon> */}
+            <Grid container wrap="nowrap" spacing={6}>
+            <Grid item xs="2" >
+            <img src={imgs[index]} width="30" height="30"/>
+            </Grid>
+            <Grid item >
+            <ListItemText primary={text}/>
+            </Grid>
+            </Grid>
+          </ListItem>
+          <Divider />
           </Link>
-        ))}
-        <Divider />
-      </List>
-    </div>
-  );
-
-  const container =
-    window !== undefined ? () => window().document.body : undefined;
-
-  return (
-    <div className={classes.root}>
-      <CssBaseline />
-      <AppBar
-        position="fixed"
-        className={clsx(classes.appBar, {
-          [classes.appBarShift]: mobileOpen,
-        })}
-      >
-        <Toolbar>
-          <Grid justify="space-between" alignItems="center" container>
-            <div style={{ display: "inline-flex", alignItems: "center" }}>
-              <IconButton
-                color="inherit"
-                aria-label="open drawer"
-                edge="start"
-                onClick={handleDrawerOpen}
-                className={clsx(classes.menuButton, mobileOpen && classes.hide)}
-              >
-                <ListIcon />
-              </IconButton>
-              <Typography variant="h6" noWrap style={{}}>
-                {props.title}
-              </Typography>
-            </div>
-            <IconButton
-              color="inherit"
-              edge="end"
-              // onClick={handleDrawerOpen}
-            >
-              <PrintIcon />
-            </IconButton>
-          </Grid>
-        </Toolbar>
-      </AppBar>
-      <nav className={classes.drawer} aria-label="mailbox folders">
-        {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-        <Hidden smUp implementation="css">
-          <Drawer
-            container={container}
-            variant="temporary"
-            anchor={theme.direction === "rtl" ? "right" : "left"}
-            open={mobileOpen}
-            onClose={handleDrawerToggle}
-            classes={{
-              paper: classes.drawerPaper,
-            }}
-            ModalProps={{
-              keepMounted: true, // Better open performance on mobile.
-            }}
-          >
-            <div className={classes.drawerHeader}>
-              <Grid alignItems="center" justifyContent="center" container >
-                <Grid item xs="2" className={classes.buroicon}>
-                  <img src="/buroicon256.jpg" width="24" height="24"/>
-                </Grid>
-                <Grid item>
-                  <Typography>ブロスタ完全攻略</Typography>
-                </Grid>
-                <Grid item>
-                  <IconButton onClick={handleDrawerClose}>
-                    {theme.direction === "ltr" ? (
-                      <ChevronLeftIcon />
-                    ) : (
-                      <ChevronRightIcon />
-                    )}
-                  </IconButton>
-                </Grid>
-              </Grid>
-            </div>
-            {drawer}
-          </Drawer>
-        </Hidden>
-        <Hidden xsDown implementation="css">
-          <Drawer
-            classes={{
-              paper: classes.drawerPaper,
-            }}
-            variant="permanent"
-            //open
-          >
-            {drawer}
-          </Drawer>
-        </Hidden>
-      </nav>
+          ))}
+        </List>
+      </Drawer>
       <main className={classes.content}>
-        <div className={classes.toolbar}/>
+        <div className={classes.toolbar} />
         <Typography paragraph>{props.children}</Typography>
       </main>
     </div>
   );
 }
-
-ResponsiveDrawer.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
-  window: PropTypes.func,
-};
-
-//export default ResponsiveDrawer;

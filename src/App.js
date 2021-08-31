@@ -1,4 +1,5 @@
-import { BrowserRouter, Route, useHistory } from "react-router-dom";
+import { useEffect } from "react";
+import { BrowserRouter, Route, useHistory, useLocation } from "react-router-dom";
 import { useSwipeable } from "react-swipeable";
 
 import Home from "./pages/Home";
@@ -72,6 +73,16 @@ function App() {
     );
   };
 
+  const ScrollToTop = () =>{
+    const { pathname } = useLocation()
+
+    useEffect(()=>{
+      window.scrollTo(0,0)
+    }, [pathname])
+
+    return null
+  }
+
   return (
       // <BrowserRouter>
       //   <Menu title="Home">
@@ -102,6 +113,7 @@ function App() {
       //   </Menu>
       // </BrowserRouter>
     <BrowserRouter>
+      <ScrollToTop/>
       {pages.map((_, i) => (
         <ContentPage index={i} />
       ))}

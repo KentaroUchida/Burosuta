@@ -10,7 +10,6 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import AppBar from "@material-ui/core/AppBar";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -53,7 +52,6 @@ const useStyles = makeStyles((theme) => ({
   drawer: {
     width: drawerWidth,
     flexShrink: 0,
-    whiteSpace: 'nowrap',
   },
   drawerOpen: {
     width: drawerWidth,
@@ -191,15 +189,16 @@ export default function MiniDrawer(props) {
             textDecoration: 'none',
             whiteSpace: 'noWrap',
             }} >
-          <ListItem button onClick={handleDrawerClose}>
+          <ListItem button onClick={handleDrawerClose} >
             {/* <ListItemIcon>{icons[index]}</ListItemIcon> */}
-            <Grid container wrap="nowrap" spacing={6}>
-            <Grid item xs="2" >
-            <img src={imgs[index]} width="30" height="30"/>
-            </Grid>
-            <Grid item >
-            <ListItemText primary={text}/>
-            </Grid>
+            <Grid container wrap="nowrap" spacing={5}>
+              <Grid item xs="2" >
+                <img src={imgs[index]} width="30" height="30" />
+              </Grid>
+              <Grid item>
+                {/* <Typography>{text}</Typography> */}
+                <ListItemText primary={text}/>
+              </Grid>
             </Grid>
           </ListItem>
           <Divider />

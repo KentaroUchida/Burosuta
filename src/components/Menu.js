@@ -112,7 +112,7 @@ export default function MiniDrawer(props) {
   ];
 
   const imgs = [
-    "/img/pages/Menu/emerald.png",
+    "/buroicon256.jpg",
     "/img/pages/Menu/emerald.png",
     "/img/pages/Menu/soccer.png",
     "/img/pages/Menu/reward.png",

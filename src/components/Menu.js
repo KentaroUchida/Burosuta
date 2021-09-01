@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
       duration: theme.transitions.duration.leavingScreen,
     }),
     overflowX: 'hidden',
-    width: theme.spacing(7) + 1,
+    width: theme.spacing(7) + 5,
   },
   toolbar: {
     display: 'flex',
@@ -80,6 +80,9 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     background: "#e8e8ed",
     padding: theme.spacing(3),
+  },
+  leftpad:{
+    paddingLeft: theme.spacing(3),
   },
 }));
 
@@ -174,7 +177,6 @@ export default function MiniDrawer(props) {
             {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
           </IconButton>
         </div>
-        <Divider />
         <List>
           {["Home",
           "エメラルドハント",
@@ -191,13 +193,13 @@ export default function MiniDrawer(props) {
             }} >
           <ListItem button onClick={handleDrawerClose} >
             {/* <ListItemIcon>{icons[index]}</ListItemIcon> */}
-            <Grid container wrap="nowrap" spacing={5}>
-              <Grid item xs="2" >
+            <Grid container wrap="nowrap" alignContent="center">
+              <Grid item >
                 <img src={imgs[index]} width="30" height="30" />
               </Grid>
               <Grid item>
                 {/* <Typography>{text}</Typography> */}
-                <ListItemText primary={text}/>
+                <ListItemText primary={text} className={classes.leftpad}/>
               </Grid>
             </Grid>
           </ListItem>

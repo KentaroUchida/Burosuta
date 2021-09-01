@@ -10,7 +10,6 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import AppBar from "@material-ui/core/AppBar";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -53,7 +52,6 @@ const useStyles = makeStyles((theme) => ({
   drawer: {
     width: drawerWidth,
     flexShrink: 0,
-    whiteSpace: 'nowrap',
   },
   drawerOpen: {
     width: drawerWidth,
@@ -68,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
       duration: theme.transitions.duration.leavingScreen,
     }),
     overflowX: 'hidden',
-    width: theme.spacing(7) + 1,
+    width: theme.spacing(7) + 5,
   },
   toolbar: {
     display: 'flex',
@@ -82,6 +80,9 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     background: "#e8e8ed",
     padding: theme.spacing(3),
+  },
+  leftpad:{
+    paddingLeft: theme.spacing(3),
   },
 }));
 
@@ -176,7 +177,6 @@ export default function MiniDrawer(props) {
             {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
           </IconButton>
         </div>
-        <Divider />
         <List>
           {["Home",
           "エメラルドハント",
@@ -191,15 +191,16 @@ export default function MiniDrawer(props) {
             textDecoration: 'none',
             whiteSpace: 'noWrap',
             }} >
-          <ListItem button onClick={handleDrawerClose}>
+          <ListItem button onClick={handleDrawerClose} >
             {/* <ListItemIcon>{icons[index]}</ListItemIcon> */}
-            <Grid container wrap="nowrap" spacing={6}>
-            <Grid item xs="2" >
-            <img src={imgs[index]} width="30" height="30"/>
-            </Grid>
-            <Grid item >
-            <ListItemText primary={text}/>
-            </Grid>
+            <Grid container wrap="nowrap" alignContent="center">
+              <Grid item >
+                <img src={imgs[index]} width="30" height="30" />
+              </Grid>
+              <Grid item>
+                {/* <Typography>{text}</Typography> */}
+                <ListItemText primary={text} className={classes.leftpad}/>
+              </Grid>
             </Grid>
           </ListItem>
           <Divider />

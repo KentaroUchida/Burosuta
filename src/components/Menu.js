@@ -79,7 +79,7 @@ const useStyles = makeStyles((theme) => ({
   content: {
     flexGrow: 1,
     background: "#e8e8ed",
-    padding: theme.spacing(3),
+    padding: theme.spacing(0),
   },
   leftpad:{
     paddingLeft: theme.spacing(3),

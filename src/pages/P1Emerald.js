@@ -48,7 +48,7 @@ function Page() {
               <div>
             <p><img src="/img/pages/Emerald/check.png" width="20"/>ごつごつ街道</p>
             <p>aaaaaaa</p></div>
-            <div　className={classes.chara}>
+            <div className={classes.chara}>
               <div>
               <img src="/img/pages/Emerald/emestage.jpg" width="200"/>
               </div>

@@ -5,7 +5,7 @@ import { ResponsiveFontProvider } from '../components/ResponsiveFontProvider';
 import { Grid } from '@material-ui/core';
 import { Paper } from '@material-ui/core';
 import { Container } from '@material-ui/core';
-import { Link } from 'react-router-dom';
+import Link from '@material-ui/core/Link';
 
 const styleCss = makeStyles((theme) =>({
   root: {

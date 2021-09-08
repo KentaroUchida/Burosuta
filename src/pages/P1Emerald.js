@@ -6,26 +6,31 @@ import Paper from '@material-ui/core/Paper';
 import { findByLabelText } from "@testing-library/react";
 import { LEFT } from "react-swipeable";
 import { ThemeProvider } from "@material-ui/core";
-
-import makeStyles from "@material-ui/core/styles/makeStyles";
-
+import MediaQuery from "react-responsive";
 
 
 const styleCss = makeStyles((theme) =>({
   root: {
     width : "100%",
-    height : "",
+    height : "100%",
     backgroundColor : "#378ab5",
     color : "white",
-    padding : theme.spacing(8),
+    padding : theme.spacing(3),
   },
   stage: {
     backgroundColor : "#6d30ca",
-    width : "50%",
+    width : "100%",
   },
-  chara: {
-    display : "flex",
-  }
+  pccharastage: {
+    width : "100%",
+    display : "flex", //画面のサイズに合わせて横に置くか下に置くか
+  },
+  pcstage: {
+    width : "50%"
+  },
+  pcchara: {
+    width : "50%"
+  },
 }));
 
 function Page() {
@@ -53,16 +58,33 @@ function Page() {
               <div>
             <p><img src="/img/pages/Emerald/check.png" width="20"/>ごつごつ街道</p>
             <p>aaaaaaa</p></div>
-            <div className={classes.chara}>
-              <div>
-              <img src="/img/pages/Emerald/emestage.jpg" width="200"/>
+            <MediaQuery query="(max-width: 767px)">
+              <div>ここにスマートフォン向けの要素を書く</div>
+              <div className={classes.pccharastage}>
+                <div>
+                <img src="/img/pages/Emerald/emestage.jpg" width="100%"/>
+                </div>
+                <div>
+                <p>・ミッド</p>
+                <img src="/img/chara/penpen.png" width="30"/>
+                <p>・サイド</p>
+                <p>※最適コンビは以下の通り</p>
+                </div>
               </div>
-              <div>
-              <p>・ミッド</p>
-              <p>・サイド</p>
-              <p>※最適コンビは以下の通り</p>
+            </MediaQuery>
+            <MediaQuery query="(min-width: 768px)">
+              <div className={classes.pccharastage}>
+                <div className={classes.pcstage}>
+                  <img src="/img/pages/Emerald/emestage.jpg" width="50%"/>
+                </div>
+                <div className={classes.pcchara}>
+                  <p>・ミッド</p>
+                  <img src="/img/chara/penpen.png" width="30"/>
+                  <p>・サイド</p>
+                  <p>※最適コンビは以下の通りaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                </div>
               </div>
-            </div>
+            </MediaQuery>
             <div>
               <p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb<br></br>
               cccccccccccccccccccccccccccccccccccccccccccccccccccc</p>

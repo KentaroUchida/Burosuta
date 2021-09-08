@@ -35,8 +35,8 @@ function Page() {
             <Typography variant="h4" align="center" className={classes.title}>ブロスタ完全攻略</Typography>
           </ResponsiveFontProvider>
         </header>
+        <br></br>
         <main>
-        <Typography variant="subtitle1" className={classes.appIntrotitle}>ブロスタのインストール</Typography>
           <div>
             <Paper elevation={2} style={{backgroundColor: "#eeeeff"}} className={classes.appIntro}>
             <Typography variant="subtitle1" className={classes.appIntrotitle}>ブロスタのインストール</Typography>

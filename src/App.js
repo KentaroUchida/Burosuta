@@ -115,7 +115,7 @@ function App() {
     <BrowserRouter>
       <ScrollToTop/>
       {pages.map((_, i) => (
-        <ContentPage index={i} />
+        <ContentPage index={i} key={i}/>
       ))}
     </BrowserRouter>
   );

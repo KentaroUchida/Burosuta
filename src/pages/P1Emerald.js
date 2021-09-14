@@ -20,20 +20,27 @@ const styleCss = makeStyles((theme) =>({
     paddingRight : "10%",
   },
   title : {
-    fontWeight : "100",
-  },
-  justcenter : {
-    textAlign : "center",
-    display : "flex",
+    fontWeight : "900",
   },
   center: {
-    textAlign : "center",
+    alignItems : "center",
     justifyContent : "center",
     display : "flex",
+  },
+  stagetitle : {
+    fontSize : "1.0rem",
+    fontWeight : "800",
   },
   stage: {
     backgroundColor : "#6d30ca",
     width : "100%",
+    border : "solid",
+  },
+  stagetitle2 : {
+    fontSize : "1.0rem",
+    fontWeight : "700",
+    textAlign : "center",
+    display : "flex",
   },
   pccharastage: {
     display : "flex", //画面のサイズに合わせて横に置くか下に置くか
@@ -65,23 +72,24 @@ function Page() {
 
           <div>
             <Grid className={classes.center}>
-              <Grid>
+              <Grid item>
                 <img src="/img/pages/Emerald/eme1.png" width="30"/>
               </Grid>
-              <Grid>
+              <Grid item>
                 <ResponsiveFontProvider>
                   <Typography variant="h5" className={classes.title}>エメラルドハント</Typography>
                 </ResponsiveFontProvider>
               </Grid>
-              <Grid>
+              <Grid item>
                 <img src="/img/pages/Emerald/eme1.png" width="30"/>
               </Grid>
             </Grid>
             
             </div>
             <section>
+            <br></br>
               <div>
-              <p>ステージ一覧</p>
+              <p className={classes.stagetitle}>ステージ一覧</p>
               </div>
               <div className={classes.stage}>
               <p>・ごつごつ坑道・ごつごつ坑道・ごつごつ坑道・ごつごつ坑道<br></br>
@@ -92,8 +100,9 @@ function Page() {
             <section>
               <div>
               <br></br>
-            <p className={classes.justcenter}><img src="/img/pages/Emerald/check.png" width="20"/>ごつごつ坑道</p>
-            <p>中央は開けているがサイドには壁があり、ブッシュも豊富なので割とあらゆるキャラが使用可能。</p></div>
+              <p className={classes.stagetitle2}><img src="/img/pages/Emerald/check.png" width="20"/>ごつごつ坑道</p>
+              <p>中央は開けているがサイドには壁があり、ブッシュも豊富なので割とあらゆるキャラが使用可能。</p>
+            </div>
             <MediaQuery query="(max-width: 767px)">
               <div>ここにスマートフォン向けの要素を書く</div>
               <div className={classes.pccharastage}>
@@ -127,9 +136,13 @@ function Page() {
                   <img src="/img/chara/タラ.png" width="10%"/>
                   <img src="/img/chara/ストゥー.png" width="10%"/>
                   <p>※最適コンビは以下の通り</p>
+                  <img src="/img/chara/ジーン.png" width="10%"/>
+                  <img src="/img/chara/サンディ.png" width="10%"/>
+                  <img src="/img/chara/タラ.png" width="10%"/>
                 </Grid>
                 </Grid>
               </Grid>
+              <p>ジーンに対してはベルやジェシーなどが強い。</p>
             </MediaQuery>
             </section>
           <div><img src="/img/pages/Emerald/hako.png" width="100"/></div>

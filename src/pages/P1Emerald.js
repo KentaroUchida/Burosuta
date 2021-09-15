@@ -8,6 +8,8 @@ import { LEFT } from "react-swipeable";
 import { ThemeProvider, Typography } from "@material-ui/core";
 import { ResponsiveFontProvider } from '../components/ResponsiveFontProvider';
 import MediaQuery from "react-responsive";
+import ReactDOM from "react-dom";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 
 const styleCss = makeStyles((theme) =>({
@@ -103,7 +105,8 @@ function Page() {
               <p className={classes.stagetitle}>ステージ一覧</p>
               </div>
               <div className={classes.stage}>
-              <p>・ごつごつ坑道・ごつごつ坑道・ごつごつ坑道・ごつごつ坑道<br></br>
+                  <AnchorLink href="#stage1" offset="70">ごつごつ坑道</AnchorLink>
+                <p>・ごつごつ坑道・ごつごつ坑道・ごつごつ坑道<br></br>
               ・ごつごつ坑道・ごつごつ坑道・ごつごつ坑道・ごつごつ坑道<br></br>
               ・ごつごつ坑道・ごつごつ坑道・ごつごつ坑道・ごつごつ坑道</p>
               </div>
@@ -111,7 +114,7 @@ function Page() {
             <section>
               <div>
               <br></br>
-              <p className={classes.stagetitle2}><img src="/img/pages/Emerald/check.png" width="20"/>ごつごつ坑道</p>
+              <p id="stage1" className={classes.stagetitle2}><img src="/img/pages/Emerald/check.png" width="20"/>ごつごつ坑道</p>
               <p>中央は開けているがサイドには壁があり、ブッシュも豊富なので割とあらゆるキャラが使用可能。</p>
             </div>
             <MediaQuery query="(max-width: 767px)">

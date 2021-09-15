@@ -60,11 +60,17 @@ const styleCss = makeStyles((theme) =>({
     paddingLeft : "5%",
     width : "75%",
   },
-  border:{
+  pcmidside :{
     background: "linear-gradient(transparent 70%, #1f4e66 70%)",
     textAlign : "center",
     fontWeight : "600",
     marginRight : "85%",
+  },
+  smmidside: {
+    background: "linear-gradient(transparent 70%, #1f4e66 70%)",
+    textAlign : "center",
+    fontWeight : "600",
+    marginRight : "75%",
   },
 }));
 
@@ -89,9 +95,8 @@ function Page() {
               <Grid item>
                 <img src="/img/pages/Emerald/eme1.png" width="30"/>
               </Grid>
-            </Grid>
-            
-            </div>
+            </Grid> 
+          </div>
             <section>
             <br></br>
               <div>
@@ -110,18 +115,32 @@ function Page() {
               <p>中央は開けているがサイドには壁があり、ブッシュも豊富なので割とあらゆるキャラが使用可能。</p>
             </div>
             <MediaQuery query="(max-width: 767px)">
-              <div>ここにスマートフォン向けの要素を書く</div>
-              <div className={classes.pccharastage}>
-                <div className={classes.left}>
-                <img src="/img/pages/Emerald/emestage.jpg" width="100%"/>
-                </div>
-                <div width="150%">
-                <p>・ミッド</p>
-                <img src="/img/chara/penpen.png" width="30"/>
-                <p>・サイド</p>
-                <p>※最適コンビは以下の通り</p>
-                </div>
-              </div>
+            <Grid>
+                <Grid >
+                <Grid className={classes.center}>
+                  <img src="/img/pages/Emerald/emestage.jpg" width="80%"/>
+                </Grid>
+                <Grid >
+                  <p className={classes.smmidside}>ミッド</p>
+                  <img src="/img/chara/ジーン.png" width="15%"/>
+                  <img src="/img/chara/エリザベス.png" width="15%"/>
+                  <img src="/img/chara/8bit.png" width="15%"/>
+                  <img src="/img/chara/ジェシー.png" width="15%"/>
+                  <p className={classes.smmidside}>サイド</p>
+                  <img src="/img/chara/ローサ.png" width="15%"/>
+                  <img src="/img/chara/モーティス.png" width="15%"/>
+                  <img src="/img/chara/リコ.png" width="15%"/>
+                  <img src="/img/chara/サンディ.png" width="15%"/>
+                  <img src="/img/chara/タラ.png" width="15%"/>
+                  <img src="/img/chara/ストゥー.png" width="15%"/>
+                  <p>※最適コンビは以下の通り</p>
+                  <img src="/img/chara/ジーン.png" width="15%"/>
+                  <img src="/img/chara/サンディ.png" width="15%"/>
+                  <img src="/img/chara/タラ.png" width="15%"/>
+                </Grid>
+                </Grid>
+              </Grid>
+              <p>ジーンに対してはベルやジェシーなどが強い。</p>
             </MediaQuery>
             <MediaQuery query="(min-width: 768px)">
               <Grid>
@@ -130,12 +149,12 @@ function Page() {
                   <img src="/img/pages/Emerald/emestage.jpg" width="100%"/>
                 </Grid>
                 <Grid className={classes.right}>
-                  <p className={classes.border}>ミッド</p>
+                  <p className={classes.pcmidside}>ミッド</p>
                   <img src="/img/chara/ジーン.png" width="10%"/>
                   <img src="/img/chara/エリザベス.png" width="10%"/>
                   <img src="/img/chara/8bit.png" width="10%"/>
                   <img src="/img/chara/ジェシー.png" width="10%"/>
-                  <p className={classes.border}>サイド</p>
+                  <p className={classes.pcmidside}>サイド</p>
                   <img src="/img/chara/ローサ.png" width="10%"/>
                   <img src="/img/chara/モーティス.png" width="10%"/>
                   <img src="/img/chara/リコ.png" width="10%"/>

@@ -35,13 +35,13 @@ function Page() {
             <Typography variant="h4" align="center" className={classes.title}>ブロスタ完全攻略</Typography>
           </ResponsiveFontProvider>
         </header>
+        <br></br>
         <main>
-        <Typography variant="subtitle1" className={classes.appIntrotitle}>ブロスタのインストール</Typography>
           <div>
             <Paper elevation={2} style={{backgroundColor: "#eeeeff"}} className={classes.appIntro}>
             <Typography variant="subtitle1" className={classes.appIntrotitle}>ブロスタのインストール</Typography>
               <br></br>
-              <Grid container spacing={0} alignContent="center" style={{width: "85%"}}>
+              <Grid container alignContent="center" style={{width: "80%"}}>
                 <Grid container item style={{width: "50%"}}>
                   <img src="/buroicon256.jpg" alt="ブロスタ アプリアイコン" style={{width: "90px", height:"90px"}}/>
                 </Grid>

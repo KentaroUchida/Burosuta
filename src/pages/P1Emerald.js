@@ -59,7 +59,13 @@ const styleCss = makeStyles((theme) =>({
   right: {
     paddingLeft : "5%",
     width : "75%",
-  }
+  },
+  border:{
+    background: "linear-gradient(transparent 70%, #1f4e66 70%)",
+    textAlign : "center",
+    fontWeight : "600",
+    marginRight : "85%",
+  },
 }));
 
 function Page() {
@@ -124,11 +130,12 @@ function Page() {
                   <img src="/img/pages/Emerald/emestage.jpg" width="100%"/>
                 </Grid>
                 <Grid className={classes.right}>
-                  <p>・ミッド</p>
+                  <p className={classes.border}>ミッド</p>
                   <img src="/img/chara/ジーン.png" width="10%"/>
                   <img src="/img/chara/エリザベス.png" width="10%"/>
                   <img src="/img/chara/8bit.png" width="10%"/>
-                  <p>・サイド</p>
+                  <img src="/img/chara/ジェシー.png" width="10%"/>
+                  <p className={classes.border}>サイド</p>
                   <img src="/img/chara/ローサ.png" width="10%"/>
                   <img src="/img/chara/モーティス.png" width="10%"/>
                   <img src="/img/chara/リコ.png" width="10%"/>

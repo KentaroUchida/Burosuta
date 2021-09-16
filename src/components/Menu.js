@@ -78,7 +78,7 @@ const useStyles = makeStyles((theme) => ({
   },
   content: {
     flexGrow: 1,
-    background: "#e8e8ed",
+    background: "white",
     padding: theme.spacing(0),
   },
   leftpad:{
@@ -209,8 +209,8 @@ export default function MiniDrawer(props) {
         </List>
       </Drawer>
       <main className={classes.content}>
-        <div className={classes.toolbar} />
-        <Typography paragraph>{props.children}</Typography>
+        <div className={classes.toolbar}/>
+        {props.children}
       </main>
     </div>
   );

@@ -8,6 +8,8 @@ import { LEFT } from "react-swipeable";
 import { ThemeProvider, Typography } from "@material-ui/core";
 import { ResponsiveFontProvider } from '../components/ResponsiveFontProvider';
 import MediaQuery from "react-responsive";
+import ReactDOM from "react-dom";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 
 const styleCss = makeStyles((theme) =>({
@@ -44,6 +46,8 @@ const styleCss = makeStyles((theme) =>({
   },
   pccharastage: {
     display : "flex", //画面のサイズに合わせて横に置くか下に置くか
+    alignItems : "center",
+    justifyContent : "center",
   },
   pcstage: {
     width : "50%"
@@ -54,7 +58,7 @@ const styleCss = makeStyles((theme) =>({
   },
   left:{
     paddingLeft : "5%",
-    width : "35%",
+    width : "45%",
   },
   right: {
     paddingLeft : "5%",
@@ -97,28 +101,30 @@ function Page() {
               </Grid>
             </Grid> 
           </div>
-            <section>
-            <br></br>
-              <div>
-              <p className={classes.stagetitle}>ステージ一覧</p>
-              </div>
-              <div className={classes.stage}>
-              <p>・ごつごつ坑道・ごつごつ坑道・ごつごつ坑道・ごつごつ坑道<br></br>
-              ・ごつごつ坑道・ごつごつ坑道・ごつごつ坑道・ごつごつ坑道<br></br>
-              ・ごつごつ坑道・ごつごつ坑道・ごつごつ坑道・ごつごつ坑道</p>
-              </div>
-            </section>
-            <section>
-              <div>
-              <br></br>
-              <p className={classes.stagetitle2}><img src="/img/pages/Emerald/check.png" width="20"/>ごつごつ坑道</p>
+
+          <section>
+          <br></br>
+            <div>
+            <p className={classes.stagetitle}>ステージ一覧</p>
+            </div>
+            <div className={classes.stage}>
+                <li><AnchorLink href="#stage1" offset="75">ごつごつ坑道</AnchorLink></li>
+                <li><AnchorLink href="#stage2" offset="75">アンダーマイン</AnchorLink></li>
+            </div>
+          </section>
+
+          <br></br>
+
+          <section>
+            <div>
+              <p id="stage1" className={classes.stagetitle2}><img src="/img/pages/Emerald/check.png" width="20"/>ごつごつ坑道</p>
               <p>中央は開けているがサイドには壁があり、ブッシュも豊富なので割とあらゆるキャラが使用可能。</p>
             </div>
-            <MediaQuery query="(max-width: 767px)">
+          <MediaQuery query="(max-width: 600px)">
             <Grid>
-                <Grid >
+              <Grid >
                 <Grid className={classes.center}>
-                  <img src="/img/pages/Emerald/emestage.jpg" width="80%"/>
+                  <img src="/img/pages/Emerald/stage/ごつごつ坑道.jpg" width="80%"/>
                 </Grid>
                 <Grid >
                   <p className={classes.smmidside}>ミッド</p>
@@ -138,40 +144,122 @@ function Page() {
                   <img src="/img/chara/サンディ.png" width="15%"/>
                   <img src="/img/chara/タラ.png" width="15%"/>
                 </Grid>
-                </Grid>
               </Grid>
-              <p>ジーンに対してはベルやジェシーなどが強い。</p>
-            </MediaQuery>
-            <MediaQuery query="(min-width: 768px)">
-              <Grid>
-                <Grid className={classes.pccharastage}>
+            </Grid>
+          </MediaQuery>
+          <MediaQuery query="(min-width: 601px)">
+            <Grid>
+              <Grid className={classes.pccharastage}>
                 <Grid className={classes.left}>
-                  <img src="/img/pages/Emerald/emestage.jpg" width="100%"/>
+                  <img src="/img/pages/Emerald/stage/ごつごつ坑道.jpg" width="100%"/>
                 </Grid>
                 <Grid className={classes.right}>
                   <p className={classes.pcmidside}>ミッド</p>
-                  <img src="/img/chara/ジーン.png" width="10%"/>
-                  <img src="/img/chara/エリザベス.png" width="10%"/>
-                  <img src="/img/chara/8bit.png" width="10%"/>
-                  <img src="/img/chara/ジェシー.png" width="10%"/>
+                  <img src="/img/chara/ジーン.png" width="12%"/>
+                  <img src="/img/chara/エリザベス.png" width="12%"/>
+                  <img src="/img/chara/8bit.png" width="12%"/>
+                  <img src="/img/chara/ジェシー.png" width="12%"/>
                   <p className={classes.pcmidside}>サイド</p>
-                  <img src="/img/chara/ローサ.png" width="10%"/>
-                  <img src="/img/chara/モーティス.png" width="10%"/>
-                  <img src="/img/chara/リコ.png" width="10%"/>
-                  <img src="/img/chara/サンディ.png" width="10%"/>
-                  <img src="/img/chara/タラ.png" width="10%"/>
-                  <img src="/img/chara/ストゥー.png" width="10%"/>
+                  <img src="/img/chara/ローサ.png" width="12%"/>
+                  <img src="/img/chara/モーティス.png" width="12%"/>
+                  <img src="/img/chara/リコ.png" width="12%"/>
+                  <img src="/img/chara/サンディ.png" width="12%"/>
+                  <img src="/img/chara/タラ.png" width="12%"/>
+                  <img src="/img/chara/ストゥー.png" width="12%"/>
                   <p>※最適コンビは以下の通り</p>
-                  <img src="/img/chara/ジーン.png" width="10%"/>
-                  <img src="/img/chara/サンディ.png" width="10%"/>
-                  <img src="/img/chara/タラ.png" width="10%"/>
-                </Grid>
+                  <img src="/img/chara/ジーン.png" width="12%"/>
+                  <img src="/img/chara/サンディ.png" width="12%"/>
+                  <img src="/img/chara/タラ.png" width="12%"/>
                 </Grid>
               </Grid>
-              <p>ジーンに対してはベルやジェシーなどが強い。</p>
-            </MediaQuery>
-            </section>
-          <div><img src="/img/pages/Emerald/hako.png" width="100"/></div>
+            </Grid>
+          </MediaQuery>
+          <p>ジーンに対してはベルやジェシーなどが強い。</p>
+          </section>
+
+          <br></br>
+
+          <section>
+            <div>
+              <p id="stage2" className={classes.stagetitle2}><img src="/img/pages/Emerald/check.png" width="20"/>アンダーマイン</p>
+              <p>押し込まれると負ける。チームで協力して殲滅しよう。</p>
+            </div>
+          <MediaQuery query="(max-width: 600px)">
+            <Grid>
+              <Grid >
+                <Grid className={classes.center}>
+                  <img src="/img/pages/Emerald/stage/アンダーマイン.png" width="80%"/>
+                </Grid>
+                <Grid >
+                  <p className={classes.smmidside}>ミッド</p>
+                  <img src="/img/chara/ジーン.png" width="15%"/>
+                  <img src="/img/chara/ジェシー.png" width="15%"/>
+                  <img src="/img/chara/ベル.png" width="15%"/>
+                  <p className={classes.smmidside}>サイド</p>
+                  <img src="/img/chara/モーティス.png" width="15%"/>
+                  <img src="/img/chara/リコ.png" width="15%"/>
+                  <img src="/img/chara/サンディ.png" width="15%"/>
+                  <img src="/img/chara/タラ.png" width="15%"/>
+                  <img src="/img/chara/ストゥー.png" width="15%"/>
+                  <img src="/img/chara/Emz.png" width="15%"/>
+                  <img src="/img/chara/ペニー.png" width="15%"/>
+                  <p>※最適コンビは以下の通り</p>
+                  分かりません。
+                </Grid>
+              </Grid>
+            </Grid>
+          </MediaQuery>
+          <MediaQuery query="(min-width: 601px)">
+            <Grid>
+              <Grid className={classes.pccharastage}>
+                <Grid className={classes.left}>
+                  <img src="/img/pages/Emerald/stage/アンダーマイン.png" width="100%"/>
+                </Grid>
+                <Grid className={classes.right}>
+                  <p className={classes.smmidside}>ミッド</p>
+                  <img src="/img/chara/ジーン.png" width="12%"/>
+                  <img src="/img/chara/ジェシー.png" width="12%"/>
+                  <img src="/img/chara/ベル.png" width="12%"/>
+                  <p className={classes.smmidside}>サイド</p>
+                  <img src="/img/chara/モーティス.png" width="12%"/>
+                  <img src="/img/chara/リコ.png" width="12%"/>
+                  <img src="/img/chara/サンディ.png" width="12%"/>
+                  <img src="/img/chara/タラ.png" width="12%"/>
+                  <img src="/img/chara/ストゥー.png" width="12%"/>
+                  <img src="/img/chara/Emz.png" width="12%"/>
+                  <img src="/img/chara/ペニー.png" width="12%"/>
+                  <p>※最適コンビは以下の通り</p>
+                  分かりません。
+                </Grid>
+              </Grid>
+            </Grid>
+          </MediaQuery>
+          <p></p>
+          </section>
+
+
+
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+
         </main>
         <footer></footer>
       </body>

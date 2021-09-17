@@ -33,6 +33,7 @@ const styleCss = makeStyles((theme) =>({
     backgroundColor : "#6d30ca",
     width : "100%",
     border : "solid",
+    color:"white",
   },
   stagetitle2 : {
     fontSize : "1.0rem",
@@ -72,13 +73,16 @@ const styleCss = makeStyles((theme) =>({
     fontWeight : "600",
     marginRight : "75%",
   },
+  white : {
+    coler : "white",
+  },
 }));
 
 function Page() {
     const classes = styleCss();
     return (
      
-      <body className={classes.root}>
+      <div className={classes.root}>
         <header></header>
         <main>
 
@@ -125,7 +129,10 @@ function Page() {
 
           <section>
             <div>
-              <p id="stage1" className={classes.stagetitle2}><img src="/img/pages/Emerald/check.png" alt="" width="20"/>ごつごつ坑道</p>
+              <p id="stage1" className={classes.stagetitle2}>
+                <img src="/img/pages/check.png" alt="" width="20"/>
+                ごつごつ坑道
+              </p>
               <p>中央は開けているがサイドには壁があり、ブッシュも豊富なので割とあらゆるキャラが使用可能。</p>
             </div>
           <MediaQuery query="(max-width: 600px)">
@@ -190,7 +197,7 @@ function Page() {
           <section>
             <div>
               <p id="stage2" className={classes.stagetitle2}>
-                <img src="/img/pages/Emerald/check.png" alt="" width="20"/>
+                <img src="/img/pages/check.png" alt="" width="20"/>
                 クリスタルアーケード
               </p>
               <p>開発中</p>
@@ -237,7 +244,7 @@ function Page() {
           <section>
             <div>
               <p id="stage3" className={classes.stagetitle2}>
-                <img src="/img/pages/Emerald/check.png" alt="" width="20"/>
+                <img src="/img/pages/check.png" alt="" width="20"/>
                 サボテンの罠
               </p>
               <p>開発中</p>
@@ -284,7 +291,7 @@ function Page() {
           <section>
             <div>
               <p id="stage4" className={classes.stagetitle2}>
-                <img src="/img/pages/Emerald/check.png" alt="" width="20"/>
+                <img src="/img/pages/check.png" alt="" width="20"/>
                 エメラルドの要塞
               </p>
               <p>開発中</p>
@@ -331,7 +338,7 @@ function Page() {
           <section>
             <div>
               <p id="stage5" className={classes.stagetitle2}>
-                <img src="/img/pages/Emerald/check.png" alt="" width="20"/>
+                <img src="/img/pages/check.png" alt="" width="20"/>
                 アンダーマイン
               </p>
               <p>押し込まれると負ける。チームで協力して殲滅しよう。</p>
@@ -394,7 +401,7 @@ function Page() {
           <section>
             <div>
               <p id="stage6" className={classes.stagetitle2}>
-                <img src="/img/pages/Emerald/check.png" alt="" width="20"/>
+                <img src="/img/pages/check.png" alt="" width="20"/>
                 ディープダイナー
               </p>
               <p>開発中</p>
@@ -441,7 +448,7 @@ function Page() {
           <section>
             <div>
               <p id="stage7" className={classes.stagetitle2}>
-                <img src="/img/pages/Emerald/check.png" alt="" width="20"/>
+                <img src="/img/pages/check.png" alt="" width="20"/>
                 沈んだ鉱山
               </p>
               <p>開発中</p>
@@ -488,7 +495,7 @@ function Page() {
           <section>
             <div>
               <p id="stage8" className={classes.stagetitle2}>
-                <img src="/img/pages/Emerald/check.png" alt="" width="20"/>
+                <img src="/img/pages/check.png" alt="" width="20"/>
                 ダイヤモンドダスト
               </p>
               <p>開発中</p>
@@ -535,7 +542,7 @@ function Page() {
           <section>
             <div>
               <p id="stage9" className={classes.stagetitle2}>
-                <img src="/img/pages/Emerald/check.png" alt="" width="20"/>
+                <img src="/img/pages/check.png" alt="" width="20"/>
                 四畳半
               </p>
               <p>開発中</p>
@@ -582,7 +589,7 @@ function Page() {
           <section>
             <div>
               <p id="stage10" className={classes.stagetitle2}>
-                <img src="/img/pages/Emerald/check.png" alt="" width="20"/>
+                <img src="/img/pages/check.png" alt="" width="20"/>
                 ダブルレール
               </p>
               <p>開発中</p>
@@ -629,7 +636,7 @@ function Page() {
           <section>
             <div>
               <p id="stage11" className={classes.stagetitle2}>
-                <img src="/img/pages/Emerald/check.png" alt="" width="20"/>
+                <img src="/img/pages/check.png" alt="" width="20"/>
                 トロッコの狂気
               </p>
               <p>開発中</p>
@@ -676,7 +683,7 @@ function Page() {
           <section>
             <div>
               <p id="stage12" className={classes.stagetitle2}>
-                <img src="/img/pages/Emerald/check.png" alt="" width="20"/>
+                <img src="/img/pages/check.png" alt="" width="20"/>
                 鋭いアングル
               </p>
               <p>開発中</p>
@@ -723,7 +730,7 @@ function Page() {
           <section>
             <div>
               <p id="stage13" className={classes.stagetitle2}>
-                <img src="/img/pages/Emerald/check.png" alt="" width="20"/>
+                <img src="/img/pages/check.png" alt="" width="20"/>
                 寂れたアーケード
               </p>
               <p>開発中</p>
@@ -770,7 +777,7 @@ function Page() {
           <section>
             <div>
               <p id="stage14" className={classes.stagetitle2}>
-                <img src="/img/pages/Emerald/check.png" alt="" width="20"/>
+                <img src="/img/pages/check.png" alt="" width="20"/>
                 綿菓子パラダイス
               </p>
               <p>開発中</p>
@@ -837,7 +844,7 @@ function Page() {
 
         </main>
         <footer></footer>
-      </body>
+      </div>
 
     );
 }

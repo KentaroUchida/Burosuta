@@ -14,10 +14,6 @@ import ListItemText from '@material-ui/core/ListItemText';
 import AppBar from "@material-ui/core/AppBar";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Divider from "@material-ui/core/Divider";
-import HomeIcon from "@material-ui/icons/HomeSharp";
-import { GiCutDiamond, GiSoccerBall, GiRoundStar, GiScrew } from 'react-icons/gi';
-import { IoFlag } from 'react-icons/io5';
-import { FcSafe } from 'react-icons/fc';
 import { Link } from "react-router-dom";
 import { Grid } from '@material-ui/core';
 
@@ -102,16 +98,6 @@ export default function MiniDrawer(props) {
     setOpen(false);
   };
 
-  const icons = [
-    <HomeIcon />,
-    <GiCutDiamond size={25}/>,
-    <GiSoccerBall size={25}/>,
-    <GiRoundStar size={25}/>,
-    <IoFlag size={25}/>,
-    <FcSafe size={25}/>,
-    <GiScrew size={25}/>,
-  ];
-
   const imgs = [
     "/buroicon256.jpg",
     "/img/pages/Menu/emerald.png",
@@ -195,7 +181,7 @@ export default function MiniDrawer(props) {
             {/* <ListItemIcon>{icons[index]}</ListItemIcon> */}
             <Grid container wrap="nowrap" alignContent="center">
               <Grid item >
-                <img src={imgs[index]} width="30" height="30" />
+                <img src={imgs[index]} alt="" width="30" height="30" />
               </Grid>
               <Grid item>
                 {/* <Typography>{text}</Typography> */}

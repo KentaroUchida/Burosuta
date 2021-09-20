@@ -66,7 +66,7 @@ function App() {
     );
     return (
       <Route exact path={paths[index]} key={index}>
-        <Menu title = {titles[index]}>
+        <Menu title = {titles[index]} now_index = {index}>
           <div {...handleSwipe}>{pages[index]}</div>
         </Menu>
       </Route>

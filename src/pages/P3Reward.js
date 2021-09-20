@@ -125,7 +125,7 @@ function Page() {
             <Grid>
               <Grid >
                 <Grid className={classes.center}>
-                  <img src="/img/pages/Soccer/stage/ミルフィーユ.png" alt="" width="80%"/>
+                  <img src="/img/pages/Reward/stage/ミルフィーユ.png" alt="" width="80%"/>
                 </Grid>
                 <Grid >
                   <p className={classes.smmidside}>ミッド</p>
@@ -142,7 +142,7 @@ function Page() {
             <Grid>
               <Grid className={classes.pccharastage}>
                 <Grid className={classes.left}>
-                  <img src="/img/pages/Soccer/stage/センターフィールド.png" alt="" width="100%"/>
+                  <img src="/img/pages/Reward/stage/ミルフィーユ.png" alt="" width="100%"/>
                 </Grid>
                 <Grid className={classes.right}>
                   <p className={classes.pcmidside}>ミッド</p>

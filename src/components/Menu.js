@@ -89,6 +89,10 @@ export default function MiniDrawer(props) {
   const [open, setOpen] = React.useState(false);
   const container =
     window !== undefined ? () => window().document.body : undefined;
+  const [selectedIndex,setSelectedIndex] = React.useState(props.now_index);
+  const handleListItemClick = (event, index) => {
+      setSelectedIndex(index);
+    };
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -177,7 +181,7 @@ export default function MiniDrawer(props) {
             textDecoration: 'none',
             whiteSpace: 'noWrap',
             }} >
-          <ListItem button onClick={handleDrawerClose} >
+          <ListItem button selected={selectedIndex === index}  onClick={(event) => handleListItemClick(event,index)} handleDrawerClose>
             {/* <ListItemIcon>{icons[index]}</ListItemIcon> */}
             <Grid container wrap="nowrap" alignContent="center">
               <Grid item >

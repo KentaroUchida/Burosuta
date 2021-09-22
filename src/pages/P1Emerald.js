@@ -28,12 +28,23 @@ const styleCss = makeStyles((theme) =>({
   stagetitle : {
     fontSize : "1.0rem",
     fontWeight : "800",
+    textAlign : "center",
+    display : "flex",
   },
   stage: {
-    backgroundColor : "#6d30ca",
+    backgroundColor : "#031d44",
     width : "100%",
     border : "solid",
-    color:"white",
+    // borderColor : "black",
+    marginRight : "50",
+    paddingLeft : "7%"
+  },
+  stagecenter : {
+    alignItems : "center",
+    display : "flex",
+  },
+  stagePaddingLeft:{
+    padding : "4px",
   },
   stagetitle2 : {
     fontSize : "1.0rem",
@@ -79,7 +90,79 @@ const styleCss = makeStyles((theme) =>({
 }));
 
 function Page() {
+
     const classes = styleCss();
+
+    const PCStages = ({stageTitle,tag}) => {
+      return(
+        <div>
+        <MediaQuery query="(max-width: 600px)">
+        <Grid className={classes.stagecenter}>
+          <img src="/img/pages/skall.png" alt="" width="15"/>
+          <Grid className={classes.stagePaddingLeft}>
+            <AnchorLink href={tag} offset="75" style={{color:"white"}}>
+              {stageTitle}
+            </AnchorLink>
+          </Grid>
+        </Grid>
+        </MediaQuery>
+        <MediaQuery query="(min-width: 601px)">
+        <Grid className={classes.stagecenter}>
+          <img src="/img/pages/skall.png" alt="" width="15"/>
+          <Grid className={classes.stagePaddingLeft}>
+            <AnchorLink href={tag} offset="75" style={{color:"white"}}>
+              {stageTitle}aaa
+            </AnchorLink>
+          </Grid>
+        </Grid>
+        </MediaQuery>
+        </div>
+      );
+  };
+    const imgs = [
+      "/buroicon256.jpg",
+      "/img/pages/Menu/emerald.png",
+      "/img/pages/Menu/soccer.png",
+      "/img/pages/Menu/reward.png",
+      "/img/pages/Menu/hotzone.png",
+      "/img/pages/Menu/robbery.png",
+      "/img/pages/Menu/suppression.png",
+    ];
+    const stages = [
+      "ごつごつ坑道",
+      "クリスタルアーケード",
+      "サボテンの罠",
+      "エメラルドの要塞",
+      "アンダーマイン",
+      "ディープダイナー",
+      "沈んだ鉱山",
+      "ダイヤモンドダスト",
+      "四畳半",
+      "ダブルレール",
+      "トロッコの狂気",
+      "鋭いアングル",
+      "寂れたアーケード",
+      "綿菓子パラダイス",
+    ];
+    const jamptag = [
+      "#stage1",
+      "#stage2",
+      "#stage3",
+      "#stage4",
+      "#stage5",
+      "#stage6",
+      "#stage7",
+      "#stage8",
+      "#stage9",
+      "#stage10",
+      "#stage11",
+      "#stage12",
+      "#stage13",
+      "#stage14",
+    ];
+
+
+
     return (
      
       <div className={classes.root}>
@@ -104,24 +187,18 @@ function Page() {
 
           <section>
           <br></br>
-            <div>
-            <p className={classes.stagetitle}>ステージ一覧</p>
-            </div>
+              <p className={classes.stagetitle}>
+                <img src="/img/pages/stages.png" alt="" width="25"/>
+                ステージ一覧
+              </p>
             <div className={classes.stage}>
-                <li><AnchorLink href="#stage1" offset="75">ごつごつ坑道</AnchorLink></li>
-                <li><AnchorLink href="#stage2" offset="75">クリスタルアーケード</AnchorLink></li>
-                <li><AnchorLink href="#stage3" offset="75">サボテンの罠</AnchorLink></li>
-                <li><AnchorLink href="#stage4" offset="75">エメラルドの要塞</AnchorLink></li>
-                <li><AnchorLink href="#stage5" offset="75">アンダーマイン</AnchorLink></li>
-                <li><AnchorLink href="#stage6" offset="75">ディープダイナー</AnchorLink></li>
-                <li><AnchorLink href="#stage7" offset="75">沈んだ鉱山</AnchorLink></li>
-                <li><AnchorLink href="#stage8" offset="75">ダイヤモンドダスト</AnchorLink></li>
-                <li><AnchorLink href="#stage9" offset="75">四畳半</AnchorLink></li>
-                <li><AnchorLink href="#stage10" offset="75">ダブルレール</AnchorLink></li>
-                <li><AnchorLink href="#stage11" offset="75">トロッコの狂気</AnchorLink></li>
-                <li><AnchorLink href="#stage12" offset="75">鋭いアングル</AnchorLink></li>
-                <li><AnchorLink href="#stage13" offset="75">寂れたアーケード</AnchorLink></li>
-                <li><AnchorLink href="#stage14" offset="75">綿菓子パラダイス</AnchorLink></li>
+            {stages.map((_, i) => (
+              <PCStages
+                stageTitle={stages[i]}
+                tag={jamptag[i]}
+                key={i}
+              />
+            ))}
             </div>
           </section>
 

@@ -35,7 +35,7 @@ const styleCss = makeStyles((theme) =>({
     backgroundColor : "#031d44",
     width : "100%",
     border : "solid",
-    // borderColor : "black",
+    borderColor : "#dab785",
     marginRight : "50",
     paddingLeft : "7%"
   },
@@ -100,7 +100,7 @@ function Page() {
         <Grid className={classes.stagecenter}>
           <img src="/img/pages/skall.png" alt="" width="15"/>
           <Grid className={classes.stagePaddingLeft}>
-            <AnchorLink href={tag} offset="75" style={{color:"white"}}>
+            <AnchorLink href={tag} offset="75" style={{color:"#dab785"}}>
               {stageTitle}
             </AnchorLink>
           </Grid>
@@ -110,7 +110,7 @@ function Page() {
         <Grid className={classes.stagecenter}>
           <img src="/img/pages/skall.png" alt="" width="15"/>
           <Grid className={classes.stagePaddingLeft}>
-            <AnchorLink href={tag} offset="85" style={{color:"white"}}>
+            <AnchorLink href={tag} offset="85" style={{color:"#dab785"}}>
               {stageTitle}
             </AnchorLink>
           </Grid>

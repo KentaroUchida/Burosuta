@@ -11,7 +11,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 const styleCss = makeStyles((theme) =>({
   root: {
     height : "100%",
-    backgroundColor : "#508b59",
+    backgroundColor : "#5bad4a",
     color : "white",
     paddingTop : "30px",
     paddingLeft : "10%",
@@ -32,10 +32,10 @@ const styleCss = makeStyles((theme) =>({
     display : "flex",
   },
   stage: {
-    backgroundColor : "#f4d8cd",
+    backgroundColor : "#6d5959",
     width : "100%",
     border : "solid",
-    borderColor : "#07004d",
+    borderColor : "#eff9f0",
     marginRight : "50",
     paddingLeft : "7%"
   },
@@ -100,7 +100,7 @@ function Page() {
         <Grid className={classes.stagecenter}>
           <img src="/img/pages/skall.png" alt="" width="15"/>
           <Grid className={classes.stagePaddingLeft}>
-            <AnchorLink href={tag} offset="75" style={{color:"#07004d"}}>
+            <AnchorLink href={tag} offset="75" style={{color:"#eff9f0"}}>
               {stageTitle}
             </AnchorLink>
           </Grid>
@@ -110,7 +110,7 @@ function Page() {
         <Grid className={classes.stagecenter}>
           <img src="/img/pages/skall.png" alt="" width="15"/>
           <Grid className={classes.stagePaddingLeft}>
-            <AnchorLink href={tag} offset="85" style={{color:"#07004d"}}>
+            <AnchorLink href={tag} offset="85" style={{color:"#eff9f0"}}>
               {stageTitle}
             </AnchorLink>
           </Grid>

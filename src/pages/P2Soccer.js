@@ -7,10 +7,11 @@ import { ResponsiveFontProvider } from '../components/ResponsiveFontProvider';
 import MediaQuery from "react-responsive";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
+
 const styleCss = makeStyles((theme) =>({
   root: {
     height : "100%",
-    backgroundColor : "#4b9538",
+    backgroundColor : "#508b59",
     color : "white",
     paddingTop : "30px",
     paddingLeft : "10%",
@@ -27,12 +28,23 @@ const styleCss = makeStyles((theme) =>({
   stagetitle : {
     fontSize : "1.0rem",
     fontWeight : "800",
+    textAlign : "center",
+    display : "flex",
   },
   stage: {
-    backgroundColor : "#6d30ca",
+    backgroundColor : "#f4d8cd",
     width : "100%",
     border : "solid",
-    color:"white",
+    borderColor : "#07004d",
+    marginRight : "50",
+    paddingLeft : "7%"
+  },
+  stagecenter : {
+    alignItems : "center",
+    display : "flex",
+  },
+  stagePaddingLeft:{
+    padding : "4px",
   },
   stagetitle2 : {
     fontSize : "1.0rem",
@@ -78,8 +90,612 @@ const styleCss = makeStyles((theme) =>({
 }));
 
 function Page() {
+
     const classes = styleCss();
+
+    const Stages = ({stageTitle,tag}) => {
+      return(
+        <div>
+        <MediaQuery query="(max-width: 600px)">
+        <Grid className={classes.stagecenter}>
+          <img src="/img/pages/skall.png" alt="" width="15"/>
+          <Grid className={classes.stagePaddingLeft}>
+            <AnchorLink href={tag} offset="75" style={{color:"#07004d"}}>
+              {stageTitle}
+            </AnchorLink>
+          </Grid>
+        </Grid>
+        </MediaQuery>
+        <MediaQuery query="(min-width: 601px)">
+        <Grid className={classes.stagecenter}>
+          <img src="/img/pages/skall.png" alt="" width="15"/>
+          <Grid className={classes.stagePaddingLeft}>
+            <AnchorLink href={tag} offset="85" style={{color:"#07004d"}}>
+              {stageTitle}
+            </AnchorLink>
+          </Grid>
+        </Grid>
+        </MediaQuery>
+        </div>
+      );
+    };
+
+    const ASm = ({a = {}}) => {
+      return (
+        <Grid >
+          <p className={classes.smmidside}>ミッド</p>
+          <img src="/img/chara/ジーン.png" alt="" width="15%"/>
+          <p className={classes.smmidside}>サイド</p>
+          <img src="/img/chara/ローサ.png" alt="" width="15%"/>
+          <p>※最適コンビは以下の通り</p>
+          <img src="/img/chara/ジーン.png" alt="" width="15%"/>
+          <img src="/img/chara/サンディ.png" alt="" width="15%"/>
+          <img src="/img/chara/タラ.png" alt="" width="15%"/>
+        </Grid>
+      )
+    }
+
+    const APc = ({a = {}}) => {
+      return (
+        <Grid className={classes.right}>
+          <p className={classes.pcmidside}>ミッド</p>
+          <img src="/img/chara/ジーン.png" alt="" width="12%"/>
+          <p className={classes.pcmidside}>サイド</p>
+          <img src="/img/chara/ローサ.png" alt="" width="12%"/>
+          <p>※最適コンビは以下の通り</p>
+          <img src="/img/chara/ジーン.png" alt="" width="12%"/>
+          <img src="/img/chara/サンディ.png" alt="" width="12%"/>
+          <img src="/img/chara/タラ.png" alt="" width="12%"/>
+        </Grid>
+      )
+    }
+
+    const BSm = ({a = {}}) => {
+      return (
+        <Grid >
+          <p className={classes.smmidside}>ミッド</p>
+          <img src="/img/chara/ジーン.png" alt="" width="15%"/>
+          <p className={classes.smmidside}>サイド</p>
+          <img src="/img/chara/モーティス.png" alt="" width="15%"/>
+          <p>※最適コンビは以下の通り</p>
+          <img src="/img/chara/ジーン.png" alt="" width="15%"/>
+          <img src="/img/chara/サンディ.png" alt="" width="15%"/>
+          <img src="/img/chara/タラ.png" alt="" width="15%"/>
+        </Grid>
+      )
+    }
+
+    const BPc = ({a = {}}) => {
+      return (
+        <Grid className={classes.right}>
+          <p className={classes.pcmidside}>ミッド</p>
+          <img src="/img/chara/ジーン.png" alt="" width="12%"/>
+          <p className={classes.pcmidside}>サイド</p>
+          <img src="/img/chara/モーティス.png" alt="" width="12%"/>
+          <p>※最適コンビは以下の通り</p>
+          <img src="/img/chara/ジーン.png" alt="" width="12%"/>
+          <img src="/img/chara/サンディ.png" alt="" width="12%"/>
+          <img src="/img/chara/タラ.png" alt="" width="12%"/>
+        </Grid>
+      )
+    }
+
+    const CSm = ({a = {}}) => {
+      return (
+        <Grid >
+          <p className={classes.smmidside}>ミッド</p>
+          <img src="/img/chara/ジーン.png" alt="" width="15%"/>
+          <p className={classes.smmidside}>サイド</p>
+          <img src="/img/chara/モーティス.png" alt="" width="15%"/>
+          <p>※最適コンビは以下の通り</p>
+          <img src="/img/chara/ジーン.png" alt="" width="15%"/>
+          <img src="/img/chara/サンディ.png" alt="" width="15%"/>
+          <img src="/img/chara/タラ.png" alt="" width="15%"/>
+        </Grid>
+      )
+    }
+
+    const CPc = ({a = {}}) => {
+      return (
+        <Grid className={classes.right}>
+          <p className={classes.pcmidside}>ミッド</p>
+          <img src="/img/chara/ジーン.png" alt="" width="12%"/>
+          <p className={classes.pcmidside}>サイド</p>
+          <img src="/img/chara/モーティス.png" alt="" width="12%"/>
+          <p>※最適コンビは以下の通り</p>
+          <img src="/img/chara/ジーン.png" alt="" width="12%"/>
+          <img src="/img/chara/サンディ.png" alt="" width="12%"/>
+          <img src="/img/chara/タラ.png" alt="" width="12%"/>
+        </Grid>
+      )
+    }
+
+    const DSm = ({a = {}}) => {
+      return (
+        <Grid >
+          <p className={classes.smmidside}>ミッド</p>
+          <img src="/img/chara/ジーン.png" alt="" width="15%"/>
+          <p className={classes.smmidside}>サイド</p>
+          <img src="/img/chara/モーティス.png" alt="" width="15%"/>
+          <p>※最適コンビは以下の通り</p>
+          <img src="/img/chara/ジーン.png" alt="" width="15%"/>
+          <img src="/img/chara/サンディ.png" alt="" width="15%"/>
+          <img src="/img/chara/タラ.png" alt="" width="15%"/>
+        </Grid>
+      )
+    }
+
+    const DPc = ({a = {}}) => {
+      return (
+        <Grid className={classes.right}>
+          <p className={classes.pcmidside}>ミッド</p>
+          <img src="/img/chara/ジーン.png" alt="" width="12%"/>
+          <p className={classes.pcmidside}>サイド</p>
+          <img src="/img/chara/モーティス.png" alt="" width="12%"/>
+          <p>※最適コンビは以下の通り</p>
+          <img src="/img/chara/ジーン.png" alt="" width="12%"/>
+          <img src="/img/chara/サンディ.png" alt="" width="12%"/>
+          <img src="/img/chara/タラ.png" alt="" width="12%"/>
+        </Grid>
+      )
+    }
+
+    const ESm = ({a = {}}) => {
+      return (
+        <Grid >
+          <p className={classes.smmidside}>ミッド</p>
+          <img src="/img/chara/ジーン.png" alt="" width="15%"/>
+          <p className={classes.smmidside}>サイド</p>
+          <img src="/img/chara/モーティス.png" alt="" width="15%"/>
+          <p>※最適コンビは以下の通り</p>
+          開発中
+        </Grid>
+      )
+    }
+
+    const EPc = ({a = {}}) => {
+      return (
+        <Grid className={classes.right}>
+          <p className={classes.smmidside}>ミッド</p>
+          <img src="/img/chara/ジーン.png" alt="" width="12%"/>
+          <p className={classes.smmidside}>サイド</p>
+          <img src="/img/chara/モーティス.png" alt="" width="12%"/>
+          <p>※最適コンビは以下の通り</p>
+          開発中
+        </Grid>
+      )
+    }
+
+    const FSm = ({a = {}}) => {
+      return (
+        <Grid >
+          <p className={classes.smmidside}>ミッド</p>
+          <img src="/img/chara/ジーン.png" alt="" width="15%"/>
+          <p className={classes.smmidside}>サイド</p>
+          <img src="/img/chara/モーティス.png" alt="" width="15%"/>
+          <p>※最適コンビは以下の通り</p>
+          <img src="/img/chara/ジーン.png" alt="" width="15%"/>
+          <img src="/img/chara/サンディ.png" alt="" width="15%"/>
+          <img src="/img/chara/タラ.png" alt="" width="15%"/>
+        </Grid>
+      )
+    }
+
+    const FPc = ({a = {}}) => {
+      return (
+        <Grid className={classes.right}>
+          <p className={classes.pcmidside}>ミッド</p>
+          <img src="/img/chara/ジーン.png" alt="" width="12%"/>
+          <p className={classes.pcmidside}>サイド</p>
+          <img src="/img/chara/モーティス.png" alt="" width="12%"/>
+          <p>※最適コンビは以下の通り</p>
+          <img src="/img/chara/ジーン.png" alt="" width="12%"/>
+          <img src="/img/chara/サンディ.png" alt="" width="12%"/>
+          <img src="/img/chara/タラ.png" alt="" width="12%"/>
+        </Grid>
+      )
+    }
+
+    const GSm = ({a = {}}) => {
+      return (
+        <Grid >
+          <p className={classes.smmidside}>ミッド</p>
+          <img src="/img/chara/ジーン.png" alt="" width="15%"/>
+          <p className={classes.smmidside}>サイド</p>
+          <img src="/img/chara/モーティス.png" alt="" width="15%"/>
+          <p>※最適コンビは以下の通り</p>
+          <img src="/img/chara/ジーン.png" alt="" width="15%"/>
+          <img src="/img/chara/サンディ.png" alt="" width="15%"/>
+          <img src="/img/chara/タラ.png" alt="" width="15%"/>
+        </Grid>
+      )
+    }
+
+    const GPc = ({a = {}}) => {
+      return (
+        <Grid className={classes.right}>
+          <p className={classes.pcmidside}>ミッド</p>
+          <img src="/img/chara/ジーン.png" alt="" width="12%"/>
+          <p className={classes.pcmidside}>サイド</p>
+          <img src="/img/chara/モーティス.png" alt="" width="12%"/>
+          <p>※最適コンビは以下の通り</p>
+          <img src="/img/chara/ジーン.png" alt="" width="12%"/>
+          <img src="/img/chara/サンディ.png" alt="" width="12%"/>
+          <img src="/img/chara/タラ.png" alt="" width="12%"/>
+        </Grid>
+      )
+    }
+
+    const HSm = ({a = {}}) => {
+      return (
+        <Grid >
+          <p className={classes.smmidside}>ミッド</p>
+          <img src="/img/chara/ジーン.png" alt="" width="15%"/>
+          <p className={classes.smmidside}>サイド</p>
+          <img src="/img/chara/モーティス.png" alt="" width="15%"/>
+          <p>※最適コンビは以下の通り</p>
+          <img src="/img/chara/ジーン.png" alt="" width="15%"/>
+          <img src="/img/chara/サンディ.png" alt="" width="15%"/>
+          <img src="/img/chara/タラ.png" alt="" width="15%"/>
+        </Grid>
+      )
+    }
+
+    const HPc = ({a = {}}) => {
+      return (
+        <Grid className={classes.right}>
+          <p className={classes.pcmidside}>ミッド</p>
+          <img src="/img/chara/ジーン.png" alt="" width="12%"/>
+          <p className={classes.pcmidside}>サイド</p>
+          <img src="/img/chara/モーティス.png" alt="" width="12%"/>
+          <p>※最適コンビは以下の通り</p>
+          <img src="/img/chara/ジーン.png" alt="" width="12%"/>
+          <img src="/img/chara/サンディ.png" alt="" width="12%"/>
+          <img src="/img/chara/タラ.png" alt="" width="12%"/>
+        </Grid>
+      )
+    }
+
+    const ISm = ({a = {}}) => {
+      return (
+        <Grid >
+          <p className={classes.smmidside}>ミッド</p>
+          <img src="/img/chara/ジーン.png" alt="" width="15%"/>
+          <p className={classes.smmidside}>サイド</p>
+          <img src="/img/chara/モーティス.png" alt="" width="15%"/>
+          <p>※最適コンビは以下の通り</p>
+          <img src="/img/chara/ジーン.png" alt="" width="15%"/>
+          <img src="/img/chara/サンディ.png" alt="" width="15%"/>
+          <img src="/img/chara/タラ.png" alt="" width="15%"/>
+        </Grid>
+      )
+    }
+
+    const IPc = ({a = {}}) => {
+      return (
+        <Grid className={classes.right}>
+          <p className={classes.pcmidside}>ミッド</p>
+          <img src="/img/chara/ジーン.png" alt="" width="12%"/>
+          <p className={classes.pcmidside}>サイド</p>
+          <img src="/img/chara/モーティス.png" alt="" width="12%"/>
+          <p>※最適コンビは以下の通り</p>
+          <img src="/img/chara/ジーン.png" alt="" width="12%"/>
+          <img src="/img/chara/サンディ.png" alt="" width="12%"/>
+          <img src="/img/chara/タラ.png" alt="" width="12%"/>
+        </Grid>
+      )
+    }
+
+    const JSm = ({a = {}}) => {
+      return (
+        <Grid >
+          <p className={classes.smmidside}>ミッド</p>
+          <img src="/img/chara/ジーン.png" alt="" width="15%"/>
+          <p className={classes.smmidside}>サイド</p>
+          <img src="/img/chara/モーティス.png" alt="" width="15%"/>
+          <p>※最適コンビは以下の通り</p>
+          <img src="/img/chara/ジーン.png" alt="" width="15%"/>
+          <img src="/img/chara/サンディ.png" alt="" width="15%"/>
+          <img src="/img/chara/タラ.png" alt="" width="15%"/>
+        </Grid>
+      )
+    }
+
+    const JPc = ({a = {}}) => {
+      return (
+        <Grid className={classes.right}>
+          <p className={classes.pcmidside}>ミッド</p>
+          <img src="/img/chara/ジーン.png" alt="" width="12%"/>
+          <p className={classes.pcmidside}>サイド</p>
+          <img src="/img/chara/モーティス.png" alt="" width="12%"/>
+          <p>※最適コンビは以下の通り</p>
+          <img src="/img/chara/ジーン.png" alt="" width="12%"/>
+          <img src="/img/chara/サンディ.png" alt="" width="12%"/>
+          <img src="/img/chara/タラ.png" alt="" width="12%"/>
+        </Grid>
+      )
+    }
+
+    const KSm = ({a = {}}) => {
+      return (
+        <Grid >
+          <p className={classes.smmidside}>ミッド</p>
+          <img src="/img/chara/ジーン.png" alt="" width="15%"/>
+          <p className={classes.smmidside}>サイド</p>
+          <img src="/img/chara/モーティス.png" alt="" width="15%"/>
+          <p>※最適コンビは以下の通り</p>
+          <img src="/img/chara/ジーン.png" alt="" width="15%"/>
+          <img src="/img/chara/サンディ.png" alt="" width="15%"/>
+          <img src="/img/chara/タラ.png" alt="" width="15%"/>
+        </Grid>
+      )
+    }
+
+    const KPc = ({a = {}}) => {
+      return (
+        <Grid className={classes.right}>
+          <p className={classes.pcmidside}>ミッド</p>
+          <img src="/img/chara/ジーン.png" alt="" width="12%"/>
+          <p className={classes.pcmidside}>サイド</p>
+          <img src="/img/chara/モーティス.png" alt="" width="12%"/>
+          <p>※最適コンビは以下の通り</p>
+          <img src="/img/chara/ジーン.png" alt="" width="12%"/>
+          <img src="/img/chara/サンディ.png" alt="" width="12%"/>
+          <img src="/img/chara/タラ.png" alt="" width="12%"/>
+        </Grid>
+      )
+    }
+
+    const LSm = ({a = {}}) => {
+      return (
+        <Grid >
+          <p className={classes.smmidside}>ミッド</p>
+          <img src="/img/chara/ジーン.png" alt="" width="15%"/>
+          <p className={classes.smmidside}>サイド</p>
+          <img src="/img/chara/モーティス.png" alt="" width="15%"/>
+          <p>※最適コンビは以下の通り</p>
+          <img src="/img/chara/ジーン.png" alt="" width="15%"/>
+          <img src="/img/chara/サンディ.png" alt="" width="15%"/>
+          <img src="/img/chara/タラ.png" alt="" width="15%"/>
+        </Grid>
+      )
+    }
+
+    const LPc = ({a = {}}) => {
+      return (
+        <Grid className={classes.right}>
+          <p className={classes.pcmidside}>ミッド</p>
+          <img src="/img/chara/ジーン.png" alt="" width="12%"/>
+          <p className={classes.pcmidside}>サイド</p>
+          <img src="/img/chara/モーティス.png" alt="" width="12%"/>
+          <p>※最適コンビは以下の通り</p>
+          <img src="/img/chara/ジーン.png" alt="" width="12%"/>
+          <img src="/img/chara/サンディ.png" alt="" width="12%"/>
+          <img src="/img/chara/タラ.png" alt="" width="12%"/>
+        </Grid>
+      )
+    }
+
+    const MSm = ({a = {}}) => {
+      return (
+        <Grid >
+          <p className={classes.smmidside}>ミッド</p>
+          <img src="/img/chara/ジーン.png" alt="" width="15%"/>
+          <p className={classes.smmidside}>サイド</p>
+          <img src="/img/chara/モーティス.png" alt="" width="15%"/>
+          <p>※最適コンビは以下の通り</p>
+          <img src="/img/chara/ジーン.png" alt="" width="15%"/>
+          <img src="/img/chara/サンディ.png" alt="" width="15%"/>
+          <img src="/img/chara/タラ.png" alt="" width="15%"/>
+        </Grid>
+      )
+    }
+
+    const MPc = ({a = {}}) => {
+      return (
+        <Grid className={classes.right}>
+          <p className={classes.pcmidside}>ミッド</p>
+          <img src="/img/chara/ジーン.png" alt="" width="12%"/>
+          <p className={classes.pcmidside}>サイド</p>
+          <img src="/img/chara/モーティス.png" alt="" width="12%"/>
+          <p>※最適コンビは以下の通り</p>
+          <img src="/img/chara/ジーン.png" alt="" width="12%"/>
+          <img src="/img/chara/サンディ.png" alt="" width="12%"/>
+          <img src="/img/chara/タラ.png" alt="" width="12%"/>
+        </Grid>
+      )
+    }
+
+    const NSm = ({a = {}}) => {
+      return (
+        <Grid >
+          <p className={classes.smmidside}>ミッド</p>
+          <img src="/img/chara/ジーン.png" alt="" width="15%"/>
+          <p className={classes.smmidside}>サイド</p>
+          <img src="/img/chara/モーティス.png" alt="" width="15%"/>
+          <p>※最適コンビは以下の通り</p>
+          <img src="/img/chara/ジーン.png" alt="" width="15%"/>
+          <img src="/img/chara/サンディ.png" alt="" width="15%"/>
+          <img src="/img/chara/タラ.png" alt="" width="15%"/>
+        </Grid>
+      )
+    }
+
+    const NPc = ({a = {}}) => {
+      return (
+        <Grid className={classes.right}>
+          <p className={classes.pcmidside}>ミッド</p>
+          <img src="/img/chara/ジーン.png" alt="" width="12%"/>
+          <p className={classes.pcmidside}>サイド</p>
+          <img src="/img/chara/モーティス.png" alt="" width="12%"/>
+          <p>※最適コンビは以下の通り</p>
+          <img src="/img/chara/ジーン.png" alt="" width="12%"/>
+          <img src="/img/chara/サンディ.png" alt="" width="12%"/>
+          <img src="/img/chara/タラ.png" alt="" width="12%"/>
+        </Grid>
+      )
+    }
+
+
+
+    const charaFuncSm = [
+      <ASm/>,
+      <BSm/>,
+      <CSm/>,
+      <DSm/>,
+      <ESm/>,
+      <FSm/>,
+      <GSm/>,
+      <HSm/>,
+      <ISm/>,
+      <JSm/>,
+      <KSm/>,
+      <LSm/>,
+      <MSm/>,
+      <NSm/>,
+    ];
+
+    const charaFuncPc = [
+      <APc/>,
+      <BPc/>,
+      <CPc/>,
+      <DPc/>,
+      <EPc/>,
+      <FPc/>,
+      <GPc/>,
+      <HPc/>,
+      <IPc/>,
+      <JPc/>,
+      <KPc/>,
+      <LPc/>,
+      <MPc/>,
+      <NPc/>,
+    ];
+
+    const Stage = ({tag,stageTitle,stageImg,stageExplanation1,charaSm,charaPc}) => {
+      return(
+      <section>
+        <br></br>
+        <div>
+          <p id={tag} className={classes.stagetitle2}>
+            <img src="/img/pages/check.png" alt="" width="20"/>
+            {stageTitle}
+          </p>
+          <p>{stageExplanation1}</p>
+        </div>
+        <MediaQuery query="(max-width: 600px)">
+          <Grid>
+            <Grid >
+              <Grid className={classes.center}>
+                <img src={stageImg} alt="" width="80%"/>
+              </Grid>
+              {charaSm}
+            </Grid>
+          </Grid>
+        </MediaQuery>
+        <MediaQuery query="(min-width: 601px)">
+          <Grid>
+            <Grid className={classes.pccharastage}>
+              <Grid className={classes.left}>
+                <img src={stageImg} alt="" width="100%"/>
+              </Grid>
+              {charaPc}
+            </Grid>
+          </Grid>
+        </MediaQuery>
+        <br></br>
+      </section>
+      );
+    };
+    
+    const stages = [
+      "鉄壁の守り",
+      "トリプル・ドリブル",
+      "狭き門",
+      "静かな広場",
+      "スーパースタジアム",
+      "ピンボールドリーム",
+      "中央コート",
+      "サニーサッカー",
+      "フィールドゴール",
+      "回転シュート",
+      "パワーショット",
+      "センターフィールド",
+      "カメの甲羅",
+      "付箋",
+    ];
+
+    const jamptag1 = [
+      "#stage1",
+      "#stage2",
+      "#stage3",
+      "#stage4",
+      "#stage5",
+      "#stage6",
+      "#stage7",
+      "#stage8",
+      "#stage9",
+      "#stage10",
+      "#stage11",
+      "#stage12",
+      "#stage13",
+      "#stage14",
+    ];
+
+    const jamptag2 = [
+      "stage1",
+      "stage2",
+      "stage3",
+      "stage4",
+      "stage5",
+      "stage6",
+      "stage7",
+      "stage8",
+      "stage9",
+      "stage10",
+      "stage11",
+      "stage12",
+      "stage13",
+      "stage14",
+    ];
+
+    const stageExp1 = [
+      "stage1",
+      "stage2",
+      "stage3",
+      "stage4",
+      "stage5",
+      "stage6",
+      "stage7",
+      "stage8",
+      "stage9",
+      "stage10",
+      "stage11",
+      "stage12",
+      "stage13",
+      "stage14",
+    ];
+
+    const stageImage = [
+      "/img/pages/Soccer/stage/鉄壁の守り.png",
+      "/img/pages/Soccer/stage/トリプル・ドリブル.png",
+      "/img/pages/Soccer/stage/狭き門.png",
+      "/img/pages/Soccer/stage/静かな広場.png",
+      "/img/pages/Soccer/stage/スーパースタジアム.png",
+      "/img/pages/Soccer/stage/ピンボールドリーム.png",
+      "/img/pages/Soccer/stage/中央コート.png",
+      "/img/pages/Soccer/stage/サニーサッカー.png",
+      "/img/pages/Soccer/stage/フィールドゴール.png",
+      "/img/pages/Soccer/stage/回転シュート.png",
+      "/img/pages/Soccer/stage/パワーショット.png",
+      "/img/pages/Soccer/stage/センターフィールド.png",
+      "/img/pages/Soccer/stage/カメの甲羅.png",
+      "/img/pages/Soccer/stage/付箋.png",
+    ];
+
+
     return (
+     
       <div className={classes.root}>
         <header></header>
         <main>
@@ -87,7 +703,7 @@ function Page() {
           <div>
             <Grid className={classes.center}>
               <Grid item>
-                <img src="/img/pages/Soccer/soccer.png" alt="" width="30"/>
+                <img src="/img/pages/Menu/soccer.png" alt="" width="30"/>
               </Grid>
               <Grid item>
                 <ResponsiveFontProvider>
@@ -95,75 +711,41 @@ function Page() {
                 </ResponsiveFontProvider>
               </Grid>
               <Grid item>
-                <img src="/img/pages/Soccer/soccer.png" alt="" width="30"/>
+                <img src="/img/pages/Menu/soccer.png" alt="" width="30"/>
               </Grid>
             </Grid> 
           </div>
 
           <section>
           <br></br>
-            <div>
-            <p className={classes.stagetitle}>ステージ一覧</p>
-            </div>
-            <div className={classes.stage}>
-                <li><AnchorLink href="#stage1" offset="75">センターフィールド</AnchorLink></li>
-            </div>
-          </section>
-
-          <br></br>
-
-          <section>
-            <div>
-              <p id="stage1" className={classes.stagetitle2}>
-                <img src="/img/pages/check.png" alt="" width="20"/>
-                センターフィールド
+              <p className={classes.stagetitle}>
+                <img src="/img/pages/stages.png" alt="" width="25"/>
+                ステージ一覧
               </p>
-              <p>中央は開けているがサイドには壁があり、ブッシュも豊富なので割とあらゆるキャラが使用可能。</p>
+            <div className={classes.stage}>
+            {stages.map((_, i) => (
+              <Stages
+                stageTitle={stages[i]}
+                tag={jamptag1[i]}
+                key={i}
+              />
+            ))}
             </div>
-          <MediaQuery query="(max-width: 600px)">
-            <Grid>
-              <Grid >
-                <Grid className={classes.center}>
-                  <img src="/img/pages/Soccer/stage/センターフィールド.png" alt="" width="80%"/>
-                </Grid>
-                <Grid >
-                  <p className={classes.smmidside}>ミッド</p>
-                  <img src="/img/chara/ダイナマイク.png" alt="" width="15%"/>
-                  <p className={classes.smmidside}>サイド</p>
-                  <img src="/img/chara/リコ.png" alt="" width="15%"/>
-                  <img src="/img/chara/サンディ.png" alt="" width="15%"/>
-                  <img src="/img/chara/タラ.png" alt="" width="15%"/>
-                  <img src="/img/chara/ストゥー.png" alt="" width="15%"/>
-                  <p>※最適コンビは以下の通り</p>
-                  開発中
-                </Grid>
-              </Grid>
-            </Grid>
-          </MediaQuery>
-          <MediaQuery query="(min-width: 601px)">
-            <Grid>
-              <Grid className={classes.pccharastage}>
-                <Grid className={classes.left}>
-                  <img src="/img/pages/Soccer/stage/センターフィールド.png" alt="" width="100%"/>
-                </Grid>
-                <Grid className={classes.right}>
-                  <p className={classes.pcmidside}>ミッド</p>
-                  <img src="/img/chara/ダイナマイク.png" alt="" width="12%"/>
-                  <p className={classes.pcmidside}>サイド</p>
-                  <img src="/img/chara/リコ.png" alt="" width="12%"/>
-                  <img src="/img/chara/サンディ.png" alt="" width="12%"/>
-                  <img src="/img/chara/タラ.png" alt="" width="12%"/>
-                  <img src="/img/chara/ストゥー.png" alt="" width="12%"/>
-                  <p>※最適コンビは以下の通り</p>
-                  開発中
-                </Grid>
-              </Grid>
-            </Grid>
-          </MediaQuery>
-          <p></p>
           </section>
 
           <br></br>
+
+          {stages.map((_, i) => (
+            <Stage
+              tag={jamptag2[i]}
+              stageTitle={stages[i]}
+              stageImg={stageImage[i]}
+              stageExplanation1={stageExp1[i]}
+              charaSm={charaFuncSm[i]}
+              charaPc={charaFuncPc[i]}
+            />
+          ))}
+
 
           
 
@@ -193,6 +775,7 @@ function Page() {
         </main>
         <footer></footer>
       </div>
+
     );
 }
 

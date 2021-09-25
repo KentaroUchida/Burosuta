@@ -36,12 +36,15 @@ const styleCss = makeStyles((theme) =>({
     width : "100%",
     border : "solid",
     borderColor : "#2e3138",
-    marginRight : "50",
-    paddingLeft : "7%"
+    paddingRight : "7%",
+    paddingLeft : "7%",
+    display : "flex",
+    flexWrap : "wrap",
   },
   stagecenter : {
     alignItems : "center",
     display : "flex",
+    paddingLeft : "12px",
   },
   stagePaddingLeft:{
     padding : "4px",
@@ -75,13 +78,13 @@ const styleCss = makeStyles((theme) =>({
   pcmidside :{
     background: "linear-gradient(transparent 70%, #1f4e66 70%)",
     textAlign : "center",
-    fontWeight : "600",
+    fontWeight : "550",
     marginRight : "82%",
   },
   smmidside: {
     background: "linear-gradient(transparent 70%, #1f4e66 70%)",
     textAlign : "center",
-    fontWeight : "600",
+    fontWeight : "550",
     marginRight : "75%",
   },
   white : {
@@ -96,7 +99,7 @@ function Page() {
     const Stages = ({stageTitle,tag}) => {
       return(
         <div>
-        <MediaQuery query="(max-width: 600px)">
+        <MediaQuery query="(max-width: 550px)">
         <Grid className={classes.stagecenter}>
           <img src="/img/pages/skall.png" alt="" width="15"/>
           <Grid className={classes.stagePaddingLeft}>
@@ -106,7 +109,7 @@ function Page() {
           </Grid>
         </Grid>
         </MediaQuery>
-        <MediaQuery query="(min-width: 601px)">
+        <MediaQuery query="(min-width: 551px)">
         <Grid className={classes.stagecenter}>
           <img src="/img/pages/skall.png" alt="" width="15"/>
           <Grid className={classes.stagePaddingLeft}>
@@ -583,7 +586,7 @@ function Page() {
           </p>
           <p>{stageExplanation1}</p>
         </div>
-        <MediaQuery query="(max-width: 600px)">
+        <MediaQuery query="(max-width: 550px)">
           <Grid>
             <Grid >
               <Grid className={classes.center}>
@@ -593,7 +596,7 @@ function Page() {
             </Grid>
           </Grid>
         </MediaQuery>
-        <MediaQuery query="(min-width: 601px)">
+        <MediaQuery query="(min-width: 551px)">
           <Grid>
             <Grid className={classes.pccharastage}>
               <Grid className={classes.left}>

@@ -697,7 +697,7 @@ function Page() {
           <div>
             <Grid className={classes.center}>
               <Grid item>
-                <img src="/img/pages/Menu/Reward.png" alt="" width="30"/>
+                <img src="/img/pages/Menu/reward.png" alt="" width="30"/>
               </Grid>
               <Grid item>
                 <ResponsiveFontProvider>
@@ -705,7 +705,7 @@ function Page() {
                 </ResponsiveFontProvider>
               </Grid>
               <Grid item>
-                <img src="/img/pages/Menu/Reward.png" alt="" width="30"/>
+                <img src="/img/pages/Menu/reward.png" alt="" width="30"/>
               </Grid>
             </Grid> 
           </div>

@@ -612,10 +612,10 @@ function Page() {
     };
     
     const stages = [
-      "ジグザク草原",
+      //"ジグザク草原",
       "流れ星",
       "隠れ家",
-      "グランドカナル",
+      //"グランドカナル",
       "優越感",
       "ミルフィーユ",
       "乾燥地帯",
@@ -676,10 +676,10 @@ function Page() {
     ];
 
     const stageImage = [
-      "/img/pages/Reward/stage/ジグザク草原.png",
+      //"/img/pages/Reward/stage/ジグザク草原.png",
       "/img/pages/Reward/stage/流れ星.png",
       "/img/pages/Reward/stage/隠れ家.png",
-      "/img/pages/Reward/stage/グランドカナル.png",
+      //"/img/pages/Reward/stage/グランドカナル.png",
       "/img/pages/Reward/stage/優越感.png",
       "/img/pages/Reward/stage/ミルフィーユ.png",
       "/img/pages/Reward/stage/乾燥地帯.png",

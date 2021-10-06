@@ -538,6 +538,65 @@ function Page() {
         </Grid>
       )
     }
+    const OSm = ({a = {}}) => {
+      return (
+        <Grid >
+          <p className={classes.smmidside}>ミッド</p>
+          <img src="/img/chara/ジーン.png" alt="" width="15%"/>
+          <p className={classes.smmidside}>サイド</p>
+          <img src="/img/chara/モーティス.png" alt="" width="15%"/>
+          <p>※最適コンビは以下の通り</p>
+          <img src="/img/chara/ジーン.png" alt="" width="15%"/>
+          <img src="/img/chara/サンディ.png" alt="" width="15%"/>
+          <img src="/img/chara/タラ.png" alt="" width="15%"/>
+        </Grid>
+      )
+    }
+
+    const OPc = ({a = {}}) => {
+      return (
+        <Grid className={classes.right}>
+          <p className={classes.pcmidside}>ミッド</p>
+          <img src="/img/chara/ジーン.png" alt="" width="12%"/>
+          <p className={classes.pcmidside}>サイド</p>
+          <img src="/img/chara/モーティス.png" alt="" width="12%"/>
+          <p>※最適コンビは以下の通り</p>
+          <img src="/img/chara/ジーン.png" alt="" width="12%"/>
+          <img src="/img/chara/サンディ.png" alt="" width="12%"/>
+          <img src="/img/chara/タラ.png" alt="" width="12%"/>
+        </Grid>
+      )
+    }
+
+    const PSm = ({a = {}}) => {
+      return (
+        <Grid >
+          <p className={classes.smmidside}>ミッド</p>
+          <img src="/img/chara/ジーン.png" alt="" width="15%"/>
+          <p className={classes.smmidside}>サイド</p>
+          <img src="/img/chara/モーティス.png" alt="" width="15%"/>
+          <p>※最適コンビは以下の通り</p>
+          <img src="/img/chara/ジーン.png" alt="" width="15%"/>
+          <img src="/img/chara/サンディ.png" alt="" width="15%"/>
+          <img src="/img/chara/タラ.png" alt="" width="15%"/>
+        </Grid>
+      )
+    }
+
+    const PPc = ({a = {}}) => {
+      return (
+        <Grid className={classes.right}>
+          <p className={classes.pcmidside}>ミッド</p>
+          <img src="/img/chara/ジーン.png" alt="" width="12%"/>
+          <p className={classes.pcmidside}>サイド</p>
+          <img src="/img/chara/モーティス.png" alt="" width="12%"/>
+          <p>※最適コンビは以下の通り</p>
+          <img src="/img/chara/ジーン.png" alt="" width="12%"/>
+          <img src="/img/chara/サンディ.png" alt="" width="12%"/>
+          <img src="/img/chara/タラ.png" alt="" width="12%"/>
+        </Grid>
+      )
+    }
 
 
 
@@ -556,6 +615,8 @@ function Page() {
       <LSm/>,
       <MSm/>,
       <NSm/>,
+      <OSm/>,
+      <PSm/>,
     ];
 
     const charaFuncPc = [
@@ -573,6 +634,8 @@ function Page() {
       <LPc/>,
       <MPc/>,
       <NPc/>,
+      <OPc/>,
+      <PPc/>,
     ];
 
     const Stage = ({tag,stageTitle,stageImg,stageExplanation1,charaSm,charaPc}) => {
@@ -626,6 +689,8 @@ function Page() {
       "センターフィールド",
       "カメの甲羅",
       "付箋",
+      "ボールポゼッション",
+      "バイナリコード",
     ];
 
     const jamptag1 = [
@@ -643,6 +708,8 @@ function Page() {
       "#stage12",
       "#stage13",
       "#stage14",
+      "#stage15",
+      "#stage16",
     ];
 
     const jamptag2 = [
@@ -660,6 +727,8 @@ function Page() {
       "stage12",
       "stage13",
       "stage14",
+      "stage15",
+      "stage16",
     ];
 
     const stageExp1 = [
@@ -694,6 +763,8 @@ function Page() {
       "/img/pages/Soccer/stage/センターフィールド.png",
       "/img/pages/Soccer/stage/カメの甲羅.png",
       "/img/pages/Soccer/stage/付箋.png",
+      "/img/pages/Soccer/stage/ボールポゼッション.png",
+      "/img/pages/Soccer/stage/バイナリコード.png",
     ];
 
 

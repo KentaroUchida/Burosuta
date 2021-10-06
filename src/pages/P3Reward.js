@@ -619,7 +619,9 @@ function Page() {
       "優越感",
       "ミルフィーユ",
       "乾燥地帯",
+      "キューブフォース",
       "紫の楽園",
+      "ビリビリゾーン",
     ];
 
     const jamptag1 = [
@@ -681,8 +683,9 @@ function Page() {
       "/img/pages/Reward/stage/優越感.png",
       "/img/pages/Reward/stage/ミルフィーユ.png",
       "/img/pages/Reward/stage/乾燥地帯.png",
+      "/img/pages/Reward/stage/キューブフォース.png",
       "/img/pages/Reward/stage/紫の楽園.png",
-      "/img/pages/Reward/stage/フィールドゴール.png",
+      "/img/pages/Reward/stage/ビリビリゾーン.png",
       "/img/pages/Reward/stage/回転シュート.png",
       "/img/pages/Reward/stage/パワーショット.png",
       "/img/pages/Reward/stage/センターフィールド.png",

@@ -674,12 +674,12 @@ function Page() {
 
     const stageImage = [
       "/img/pages/Suppression/stage/hotdrop.png",
-      "/img/pages/Suppression/stage/受注生産品.png",
-      "/img/pages/Suppression/stage/重要ポイント.png",
-      "/img/pages/Suppression/stage/ごみ捨て場.png",
-      "/img/pages/Suppression/stage/工場大乱闘.png",
-      "/img/pages/Suppression/stage/ロボットリング.png",
-      "/img/pages/Suppression/stage/骨董品.png",
+      "/img/pages/Suppression/stage/jutyu.png",
+      "/img/pages/Suppression/stage/juyo.png",
+      "/img/pages/Suppression/stage/gomi.png",
+      "/img/pages/Suppression/stage/kojo.png",
+      "/img/pages/Suppression/stage/robot.png",
+      "/img/pages/Suppression/stage/kotto.png",
     ];
 
 

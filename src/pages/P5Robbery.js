@@ -673,13 +673,13 @@ function Page() {
     ];
 
     const stageImage = [
-      "/img/pages/Robbery/stage/どんぱち谷.png",
-      "/img/pages/Robbery/stage/安全地帯.png",
-      "/img/pages/Robbery/stage/ホットポテト.png",
-      "/img/pages/Robbery/stage/橋の彼方.png",
-      "/img/pages/Robbery/stage/ピットストップ.png",
-      "/img/pages/Robbery/stage/ジグザグロード.png",
-      "/img/pages/Robbery/stage/ガラガラヘビの谷.png",
+      "/img/pages/Robbery/stage/donpachi.png",
+      "/img/pages/Robbery/stage/anzen.png",
+      "/img/pages/Robbery/stage/hotpoteto.png",
+      "/img/pages/Robbery/stage/hashi.png",
+      "/img/pages/Robbery/stage/pitstop.png",
+      "/img/pages/Robbery/stage/ziguzagu.png",
+      "/img/pages/Robbery/stage/garagara.png",
     ];
 
 

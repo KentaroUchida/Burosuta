@@ -673,7 +673,7 @@ function Page() {
     ];
 
     const stageImage = [
-      "/img/pages/Suppression/stage/ホットドロップ.png",
+      "/img/pages/Suppression/stage/hotdrop.png",
       "/img/pages/Suppression/stage/受注生産品.png",
       "/img/pages/Suppression/stage/重要ポイント.png",
       "/img/pages/Suppression/stage/ごみ捨て場.png",

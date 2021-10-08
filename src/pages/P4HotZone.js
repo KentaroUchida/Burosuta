@@ -673,13 +673,13 @@ function Page() {
     ];
 
     const stageImage = [
-      "/img/pages/HotZone/stage/コントローラーカオス.png",
-      "/img/pages/HotZone/stage/パラレルワールド.png",
-      "/img/pages/HotZone/stage/スプリット.png",
-      "/img/pages/HotZone/stage/炎のリング.png",
-      "/img/pages/HotZone/stage/ビートルバトル.png",
-      "/img/pages/HotZone/stage/ナイトミュージアム.png",
-      "/img/pages/HotZone/stage/危険ゾーン.png",
+      "/img/pages/HotZone/stage/controller.png",
+      "/img/pages/HotZone/stage/para.png",
+      "/img/pages/HotZone/stage/split.png",
+      "/img/pages/HotZone/stage/honoo.png",
+      "/img/pages/HotZone/stage/beetle.png",
+      "/img/pages/HotZone/stage/night.png",
+      "/img/pages/HotZone/stage/kiken.png",
     ];
 
 

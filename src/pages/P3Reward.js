@@ -676,21 +676,16 @@ function Page() {
     ];
 
     const stageImage = [
-      //"/img/pages/Reward/stage/ジグザク草原.png",
-      "/img/pages/Reward/stage/流れ星.png",
-      "/img/pages/Reward/stage/隠れ家.png",
-      //"/img/pages/Reward/stage/グランドカナル.png",
-      "/img/pages/Reward/stage/優越感.png",
-      "/img/pages/Reward/stage/ミルフィーユ.png",
-      "/img/pages/Reward/stage/乾燥地帯.png",
-      "/img/pages/Reward/stage/キューブフォース.png",
-      "/img/pages/Reward/stage/紫の楽園.png",
-      "/img/pages/Reward/stage/ビリビリゾーン.png",
-      "/img/pages/Reward/stage/回転シュート.png",
-      "/img/pages/Reward/stage/パワーショット.png",
-      "/img/pages/Reward/stage/センターフィールド.png",
-      "/img/pages/Reward/stage/カメの甲羅.png",
-      "/img/pages/Reward/stage/付箋.png",
+      //"/img/pages/Reward/stage/ziguzabgu.png",
+      "/img/pages/Reward/stage/nagare.png",
+      "/img/pages/Reward/stage/kakurega.png",
+      //"/img/pages/Reward/stage/grand.png",
+      "/img/pages/Reward/stage/yuuetu.png",
+      "/img/pages/Reward/stage/millefeuille.png",
+      "/img/pages/Reward/stage/kansou.png",
+      "/img/pages/Reward/stage/cube.png",
+      "/img/pages/Reward/stage/murasaki.png",
+      "/img/pages/Reward/stage/biribiri.png",
     ];
 
 

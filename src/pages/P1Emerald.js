@@ -715,20 +715,20 @@ function Page() {
     ];
 
     const stageImage = [
-      "/img/pages/Emerald/stage/ごつごつ坑道.png",
-      "/img/pages/Emerald/stage/クリスタルアーケード.png",
-      "/img/pages/Emerald/stage/サボテンの罠.png",
-      "/img/pages/Emerald/stage/エメラルドの要塞.png",
-      "/img/pages/Emerald/stage/アンダーマイン.png",
-      "/img/pages/Emerald/stage/ディープダイナー.png",
-      "/img/pages/Emerald/stage/沈んだ鉱山.png",
-      "/img/pages/Emerald/stage/ダイヤモンドダスト.png",
-      "/img/pages/Emerald/stage/四畳半.png",
-      "/img/pages/Emerald/stage/ダブルレール.png",
-      "/img/pages/Emerald/stage/トロッコの狂気.png",
-      "/img/pages/Emerald/stage/鋭いアングル.png",
-      "/img/pages/Emerald/stage/寂れたアーケード.png",
-      "/img/pages/Emerald/stage/綿菓子パラダイス.png",
+      "/img/pages/Emerald/stage/gotsugotsu.png",
+      "/img/pages/Emerald/stage/cristal.png",
+      "/img/pages/Emerald/stage/saboten.png",
+      "/img/pages/Emerald/stage/emerald.png",
+      "/img/pages/Emerald/stage/under.png",
+      "/img/pages/Emerald/stage/deep.png",
+      "/img/pages/Emerald/stage/sizunda.png",
+      "/img/pages/Emerald/stage/diamond.png",
+      "/img/pages/Emerald/stage/yonjo.png",
+      "/img/pages/Emerald/stage/double.png",
+      "/img/pages/Emerald/stage/torokko.png",
+      "/img/pages/Emerald/stage/surudoi.png",
+      "/img/pages/Emerald/stage/sabireta.png",
+      "/img/pages/Emerald/stage/watagashi.png",
     ];
 
 

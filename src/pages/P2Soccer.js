@@ -749,22 +749,22 @@ function Page() {
     ];
 
     const stageImage = [
-      "/img/pages/Soccer/stage/鉄壁の守り.png",
-      "/img/pages/Soccer/stage/トリプル・ドリブル.png",
-      "/img/pages/Soccer/stage/狭き門.png",
-      "/img/pages/Soccer/stage/静かな広場.png",
-      "/img/pages/Soccer/stage/スーパースタジアム.png",
-      "/img/pages/Soccer/stage/ピンボールドリーム.png",
-      "/img/pages/Soccer/stage/中央コート.png",
-      //"/img/pages/Soccer/stage/サニーサッカー.png",
-      "/img/pages/Soccer/stage/フィールドゴール.png",
-      "/img/pages/Soccer/stage/回転シュート.png",
-      "/img/pages/Soccer/stage/パワーショット.png",
-      "/img/pages/Soccer/stage/センターフィールド.png",
-      //"/img/pages/Soccer/stage/カメの甲羅.png",
-      "/img/pages/Soccer/stage/付箋.png",
-      "/img/pages/Soccer/stage/ボールポゼッション.png",
-      "/img/pages/Soccer/stage/バイナリコード.png",
+      "/img/pages/Soccer/stage/teppeki.png",
+      "/img/pages/Soccer/stage/triple.png",
+      "/img/pages/Soccer/stage/semaki.png",
+      "/img/pages/Soccer/stage/sizukana.png",
+      "/img/pages/Soccer/stage/super.png",
+      "/img/pages/Soccer/stage/pinball.png",
+      "/img/pages/Soccer/stage/tyuou.png",
+      //"/img/pages/Soccer/stage/sunny.png",
+      "/img/pages/Soccer/stage/field.png",
+      "/img/pages/Soccer/stage/kaiten.png",
+      "/img/pages/Soccer/stage/power.png",
+      "/img/pages/Soccer/stage/center.png",
+      //"/img/pages/Soccer/stage/kame.png",
+      "/img/pages/Soccer/stage/husen.png",
+      "/img/pages/Soccer/stage/ball.png",
+      "/img/pages/Soccer/stage/bainari.png",
     ];
 
 

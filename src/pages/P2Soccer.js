@@ -453,13 +453,15 @@ function Page() {
       return (
         <Grid >
           <p className={classes.smmidside}>ミッド</p>
-          <img src="/img/chara/ジーン.png" alt="" width="15%"/>
+          <img src="/img/chara/リコ.png" alt="" width="15%"/>
           <p className={classes.smmidside}>サイド</p>
           <img src="/img/chara/モーティス.png" alt="" width="15%"/>
-          <p>※最適コンビは以下の通り</p>
-          <img src="/img/chara/ジーン.png" alt="" width="15%"/>
-          <img src="/img/chara/サンディ.png" alt="" width="15%"/>
           <img src="/img/chara/タラ.png" alt="" width="15%"/>
+          <img src="/img/chara/サンディ.png" alt="" width="15%"/>
+          <img src="/img/chara/フランケン.png" alt="" width="15%"/>
+          <img src="/img/chara/ジャッキー.png" alt="" width="15%"/>
+          <img src="/img/chara/ゲイル.png" alt="" width="15%"/>
+          <p>※最適コンビは以下の通り</p>
         </Grid>
       )
     }
@@ -468,13 +470,15 @@ function Page() {
       return (
         <Grid className={classes.right}>
           <p className={classes.pcmidside}>ミッド</p>
-          <img src="/img/chara/ジーン.png" alt="" width="12%"/>
+          <img src="/img/chara/リコ.png" alt="" width="12%"/>
           <p className={classes.pcmidside}>サイド</p>
           <img src="/img/chara/モーティス.png" alt="" width="12%"/>
-          <p>※最適コンビは以下の通り</p>
-          <img src="/img/chara/ジーン.png" alt="" width="12%"/>
-          <img src="/img/chara/サンディ.png" alt="" width="12%"/>
           <img src="/img/chara/タラ.png" alt="" width="12%"/>
+          <img src="/img/chara/サンディ.png" alt="" width="12%"/>
+          <img src="/img/chara/フランケン.png" alt="" width="12%"/>
+          <img src="/img/chara/ジャッキー.png" alt="" width="12%"/>
+          <img src="/img/chara/ゲイル.png" alt="" width="12%"/>
+          <p>※最適コンビは以下の通り</p>
         </Grid>
       )
     }
@@ -499,12 +503,10 @@ function Page() {
         <Grid className={classes.right}>
           <p className={classes.pcmidside}>ミッド</p>
           <img src="/img/chara/ジーン.png" alt="" width="12%"/>
+          <img src="/img/chara/タラ.png" alt="" width="12%"/>
           <p className={classes.pcmidside}>サイド</p>
           <img src="/img/chara/モーティス.png" alt="" width="12%"/>
           <p>※最適コンビは以下の通り</p>
-          <img src="/img/chara/ジーン.png" alt="" width="12%"/>
-          <img src="/img/chara/サンディ.png" alt="" width="12%"/>
-          <img src="/img/chara/タラ.png" alt="" width="12%"/>
         </Grid>
       )
     }
@@ -515,11 +517,10 @@ function Page() {
           <p className={classes.smmidside}>ミッド</p>
           <img src="/img/chara/ジーン.png" alt="" width="15%"/>
           <p className={classes.smmidside}>サイド</p>
-          <img src="/img/chara/モーティス.png" alt="" width="15%"/>
-          <p>※最適コンビは以下の通り</p>
-          <img src="/img/chara/ジーン.png" alt="" width="15%"/>
-          <img src="/img/chara/サンディ.png" alt="" width="15%"/>
           <img src="/img/chara/タラ.png" alt="" width="15%"/>
+          <img src="/img/chara/モーティス.png" alt="" width="15%"/>
+          <img src="/img/chara/サンディ.png" alt="" width="15%"/>
+          <p>※最適コンビは以下の通り</p>
         </Grid>
       )
     }
@@ -530,11 +531,9 @@ function Page() {
           <p className={classes.pcmidside}>ミッド</p>
           <img src="/img/chara/ジーン.png" alt="" width="12%"/>
           <p className={classes.pcmidside}>サイド</p>
+          <img src="/img/chara/タラ.png" alt="" width="12%"/>
           <img src="/img/chara/モーティス.png" alt="" width="12%"/>
           <p>※最適コンビは以下の通り</p>
-          <img src="/img/chara/ジーン.png" alt="" width="12%"/>
-          <img src="/img/chara/サンディ.png" alt="" width="12%"/>
-          <img src="/img/chara/タラ.png" alt="" width="12%"/>
         </Grid>
       )
     }
@@ -616,7 +615,6 @@ function Page() {
       <MSm/>,
       <NSm/>,
       <OSm/>,
-      <PSm/>,
     ];
 
     const charaFuncPc = [
@@ -635,7 +633,6 @@ function Page() {
       <MPc/>,
       <NPc/>,
       <OPc/>,
-      <PPc/>,
     ];
 
     const Stage = ({tag,stageTitle,stageImg,stageExplanation1,charaSm,charaPc}) => {
@@ -743,7 +740,7 @@ function Page() {
       "stage9",
       "stage10",
       "stage11",
-      "stage12",
+      "壁が多いため圧倒的にタンクが強い。それなら投げキャラも使えるのではと思った方もいるかもしれないが、投げはタンクに対して立ち回りが難しいためお勧めしない。",
       "stage13",
       "stage14",
     ];

@@ -6,6 +6,7 @@ import { Grid } from '@material-ui/core';
 import { Paper } from '@material-ui/core';
 import { Container } from '@material-ui/core';
 import Link from '@material-ui/core/Link';
+import {} from "../css/home.css";
 
 const styleCss = makeStyles((theme) =>({
   root: {
@@ -37,6 +38,9 @@ function Page() {
         </header>
         <br></br>
         <main>
+          <ResponsiveFontProvider>
+            <Typography variant="h7" className={classes.title}>このサイトは、ブロスタを少し齧った管理人がプログラミングの勉強も兼ねて運営している攻略サイトです。ご理解ご協力お願いします。</Typography>
+          </ResponsiveFontProvider>
           <div>
             <Paper elevation={2} style={{backgroundColor: "#eeeeff"}} className={classes.appIntro}>
             <Typography variant="subtitle1" className={classes.appIntrotitle}>ブロスタのインストール</Typography>

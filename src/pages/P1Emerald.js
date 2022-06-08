@@ -134,6 +134,7 @@ function Page() {
           <img src="/img/chara/エリザベス.png" alt="" width="15%"/>
           <img src="/img/chara/8bit.png" alt="" width="15%"/>
           <img src="/img/chara/ジェシー.png" alt="" width="15%"/>
+          <img src="/img/chara/パム.png" alt="" width="15%"/>
           <p className={classes.smmidside}>サイド</p>
           <img src="/img/chara/ローサ.png" alt="" width="15%"/>
           <img src="/img/chara/モーティス.png" alt="" width="15%"/>
@@ -157,6 +158,7 @@ function Page() {
           <img src="/img/chara/エリザベス.png" alt="" width="12%"/>
           <img src="/img/chara/8bit.png" alt="" width="12%"/>
           <img src="/img/chara/ジェシー.png" alt="" width="12%"/>
+          <img src="/img/chara/パム.png" alt="" width="12%"/>
           <p className={classes.pcmidside}>サイド</p>
           <img src="/img/chara/ローサ.png" alt="" width="12%"/>
           <img src="/img/chara/モーティス.png" alt="" width="12%"/>
@@ -164,6 +166,7 @@ function Page() {
           <img src="/img/chara/サンディ.png" alt="" width="12%"/>
           <img src="/img/chara/タラ.png" alt="" width="12%"/>
           <img src="/img/chara/ストゥー.png" alt="" width="12%"/>
+          <img src="/img/chara/ラフス.png" alt="" width="12%"/>
           <p>※最適コンビは以下の通り</p>
           <img src="/img/chara/ジーン.png" alt="" width="12%"/>
           <img src="/img/chara/サンディ.png" alt="" width="12%"/>

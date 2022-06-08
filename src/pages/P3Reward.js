@@ -123,15 +123,16 @@ function Page() {
       );
     };
 
+    // 流れ星
     const ASm = ({a = {}}) => {
       return (
         <Grid >
           <p className={classes.smmidside}>ミッド</p>
           <img src="/img/chara/ジーン.png" alt="" width="15%"/>
           <p className={classes.smmidside}>サイド</p>
-          <img src="/img/chara/ローサ.png" alt="" width="15%"/>
+          <img src="/img/chara/バイロン.png" alt="" width="15%"/>
           <p>※最適コンビは以下の通り</p>
-          <img src="/img/chara/ジーン.png" alt="" width="15%"/>
+          <img src="/img/chara/バイロン.png" alt="" width="15%"/>
           <img src="/img/chara/サンディ.png" alt="" width="15%"/>
           <img src="/img/chara/タラ.png" alt="" width="15%"/>
         </Grid>
@@ -144,15 +145,22 @@ function Page() {
           <p className={classes.pcmidside}>ミッド</p>
           <img src="/img/chara/ジーン.png" alt="" width="12%"/>
           <p className={classes.pcmidside}>サイド</p>
-          <img src="/img/chara/ローサ.png" alt="" width="12%"/>
+          <img src="/img/chara/ジーン.png" alt="" width="12%"/>
+          <img src="/img/chara/バイロン.png" alt="" width="12%"/>
+          <img src="/img/chara/ナーニ.png" alt="" width="12%"/>
+          <img src="/img/chara/ティック.png" alt="" width="12%"/>
+          <img src="/img/chara/max.png" alt="" width="12%"/>
+          <img src="/img/chara/ブロック.png" alt="" width="12%"/>
+          <img src="/img/chara/スプラウト.png" alt="" width="12%"/>
           <p>※最適コンビは以下の通り</p>
           <img src="/img/chara/ジーン.png" alt="" width="12%"/>
-          <img src="/img/chara/サンディ.png" alt="" width="12%"/>
-          <img src="/img/chara/タラ.png" alt="" width="12%"/>
+          <img src="/img/chara/max.png" alt="" width="12%"/>
+          <img src="/img/chara/スプラウト.png" alt="" width="12%"/>
         </Grid>
       )
     }
 
+    // 隠れ家
     const BSm = ({a = {}}) => {
       return (
         <Grid >
@@ -183,6 +191,7 @@ function Page() {
       )
     }
 
+    // 優越感
     const CSm = ({a = {}}) => {
       return (
         <Grid >
@@ -212,7 +221,8 @@ function Page() {
         </Grid>
       )
     }
-
+    
+    // ミルフィーユ
     const DSm = ({a = {}}) => {
       return (
         <Grid >
@@ -243,6 +253,7 @@ function Page() {
       )
     }
 
+    // 乾燥地帯
     const ESm = ({a = {}}) => {
       return (
         <Grid >
@@ -269,6 +280,7 @@ function Page() {
       )
     }
 
+    // キューブフォース
     const FSm = ({a = {}}) => {
       return (
         <Grid >
@@ -299,6 +311,7 @@ function Page() {
       )
     }
 
+    // 紫の楽園
     const GSm = ({a = {}}) => {
       return (
         <Grid >
@@ -329,6 +342,7 @@ function Page() {
       )
     }
 
+    // ビリビリゾーン
     const HSm = ({a = {}}) => {
       return (
         <Grid >

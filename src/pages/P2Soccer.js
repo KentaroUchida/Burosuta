@@ -232,9 +232,15 @@ function Page() {
       return (
         <Grid className={classes.right}>
           <p className={classes.pcmidside}>ミッド</p>
-          <img src="/img/chara/ジーン.png" alt="" width="12%"/>
+          <img src="/img/chara/Emz.png" alt="" width="12%"/>
+          <img src="/img/chara/メグ.png" alt="" width="12%"/>
           <p className={classes.pcmidside}>サイド</p>
-          <img src="/img/chara/モーティス.png" alt="" width="12%"/>
+          <img src="/img/chara/サンディ.png" alt="" width="12%"/>
+          <img src="/img/chara/タラ.png" alt="" width="12%"/>
+          <img src="/img/chara/ゲイル.png" alt="" width="12%"/>
+          <img src="/img/chara/フランケン.png" alt="" width="12%"/>
+          <img src="/img/chara/バズ.png" alt="" width="12%"/>
+          <img src="/img/chara/max.png" alt="" width="12%"/>
           <p>※最適コンビは以下の通り</p>
           <img src="/img/chara/ジーン.png" alt="" width="12%"/>
           <img src="/img/chara/サンディ.png" alt="" width="12%"/>
